@@ -439,14 +439,14 @@ function Index() {
             <div className="mt-10 space-y-5">
               <a
                 href="tel:+5511978813648"
-                className="flex items-center gap-4 rounded-2xl border border-border bg-background p-5 transition hover:border-[var(--color-gold)]/60 hover:shadow-soft"
+                className="flex items-center gap-4 rounded-2xl border border-border bg-background p-4 transition hover:border-[var(--color-gold)]/60 hover:shadow-soft sm:p-5"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-rose)]/12 text-[var(--color-rose-deep)]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-rose)]/12 text-[var(--color-rose-deep)]">
                   <Phone className="h-5 w-5" />
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.22em] text-foreground/60">Agendamento</p>
-                  <p className="font-display text-xl text-[var(--color-rose-deep)]">(11) 97881-3648</p>
+                <div className="min-w-0">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-foreground/60 sm:text-xs">Agendamento</p>
+                  <p className="truncate font-display text-lg text-[var(--color-rose-deep)] sm:text-xl">(11) 97881-3648</p>
                 </div>
               </a>
 
@@ -454,24 +454,24 @@ function Index() {
                 href="https://www.trinks.com/vitta-bella1"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-border bg-background p-5 transition hover:border-[var(--color-gold)]/60 hover:shadow-soft"
+                className="flex items-center gap-4 rounded-2xl border border-border bg-background p-4 transition hover:border-[var(--color-gold)]/60 hover:shadow-soft sm:p-5"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-gold)]/15 text-[var(--color-gold)]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-gold)]/15 text-[var(--color-gold)]">
                   <Clock className="h-5 w-5" />
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.22em] text-foreground/60">Agendamento online</p>
-                  <p className="font-display text-xl text-[var(--color-rose-deep)]">trinks.com/vitta-bella1</p>
+                <div className="min-w-0">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-foreground/60 sm:text-xs">Agendamento online</p>
+                  <p className="truncate font-display text-lg text-[var(--color-rose-deep)] sm:text-xl">trinks.com/vitta-bella1</p>
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-background p-5">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-leaf)]/12 text-[var(--color-leaf)]">
+              <div className="flex items-center gap-4 rounded-2xl border border-border bg-background p-4 sm:p-5">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-leaf)]/12 text-[var(--color-leaf)]">
                   <MapPin className="h-5 w-5" />
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.22em] text-foreground/60">Localização</p>
-                  <p className="font-display text-xl text-[var(--color-rose-deep)]">Santo André · SP</p>
+                <div className="min-w-0">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-foreground/60 sm:text-xs">Localização</p>
+                  <p className="truncate font-display text-lg text-[var(--color-rose-deep)] sm:text-xl">Santo André · SP</p>
                 </div>
               </div>
 
