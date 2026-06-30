@@ -395,11 +395,11 @@ function Index() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section id="depoimentos" className="bg-gradient-blush py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="depoimentos" className="bg-gradient-blush py-16 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">Depoimentos</p>
-            <h2 className="mt-4 font-display text-4xl text-[var(--color-rose-deep)] md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
               Histórias de transformação <span className="italic">e cuidado.</span>
             </h2>
           </div>
