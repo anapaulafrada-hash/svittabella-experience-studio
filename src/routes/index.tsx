@@ -252,7 +252,7 @@ function Index() {
         <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">O Espaço</p>
-            <h2 className="mt-4 font-display text-4xl text-[var(--color-rose-deep)] md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
               Um refúgio de elegância <span className="italic">e cuidado.</span>
             </h2>
             <p className="mt-5 text-foreground/70">
