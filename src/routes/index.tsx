@@ -172,7 +172,7 @@ function Index() {
           className="pointer-events-none absolute -bottom-32 -left-32 h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
           style={{ background: "radial-gradient(closest-side, var(--color-rose), transparent)" }}
         />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-12">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-6 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-[var(--color-gold)]/40 bg-background/60 px-4 py-1.5 backdrop-blur-sm">
               <Sparkles className="h-3.5 w-3.5 text-[var(--color-gold)]" />
