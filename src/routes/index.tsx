@@ -248,8 +248,8 @@ function Index() {
       </section>
 
       {/* PILLARS */}
-      <section id="espaco" className="bg-[var(--color-cream)] py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="espaco" className="bg-[var(--color-cream)] py-16 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">O Espaço</p>
             <h2 className="mt-4 font-display text-4xl text-[var(--color-rose-deep)] md:text-5xl">
