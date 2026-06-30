@@ -502,7 +502,7 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="border-t border-border bg-[var(--color-cream)] py-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 text-center sm:px-6 md:flex-row md:text-left">
           <div className="flex items-center gap-3">
             <img src={logoAsset.url} alt="Spazio Vitta Bella" className="h-10 w-10 rounded-full object-cover ring-1 ring-[var(--color-gold)]/40" />
             <div>
