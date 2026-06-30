@@ -354,7 +354,7 @@ function Index() {
             <div className="overflow-hidden rounded-[2rem] ring-1 ring-[var(--color-gold)]/40 shadow-soft">
               <img src={lotusImg} alt="Detalhe lótus" width={1200} height={1200} loading="lazy" className="aspect-square w-full object-cover" />
             </div>
-            <div className="absolute -bottom-8 -right-4 max-w-[16rem] rounded-2xl bg-[var(--color-cream)] p-5 text-[var(--color-rose-deep)] shadow-soft md:-right-8">
+            <div className="absolute -bottom-6 left-4 right-4 max-w-[16rem] rounded-2xl bg-[var(--color-cream)] p-4 text-[var(--color-rose-deep)] shadow-soft sm:-bottom-8 sm:left-auto sm:right-4 sm:p-5 md:-right-8">
               <Quote className="h-5 w-5 text-[var(--color-gold)]" />
               <p className="mt-2 font-display text-base italic">
                 "Não é um procedimento. É um ritual de retorno a si mesma."
