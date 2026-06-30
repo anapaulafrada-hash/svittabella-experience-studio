@@ -349,7 +349,7 @@ function Index() {
               "radial-gradient(at 20% 20%, var(--color-gold) 0, transparent 40%), radial-gradient(at 80% 80%, var(--color-rose) 0, transparent 45%)",
           }}
         />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 md:grid-cols-2">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-6 md:grid-cols-2">
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] ring-1 ring-[var(--color-gold)]/40 shadow-soft">
               <img src={lotusImg} alt="Detalhe lótus" width={1200} height={1200} loading="lazy" className="aspect-square w-full object-cover" />
