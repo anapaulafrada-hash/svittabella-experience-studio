@@ -136,7 +136,7 @@ function Index() {
             Agendar
             <ArrowRight className="h-3.5 w-3.5" />
           </a>
-          <button className="md:hidden text-[var(--color-rose-deep)]" onClick={() => setOpen((v) => !v)} aria-label="Menu">
+          <button className="shrink-0 p-2 text-[var(--color-rose-deep)] md:hidden" onClick={() => setOpen((v) => !v)} aria-label="Menu">
             {open ? <X /> : <Menu />}
           </button>
         </div>
