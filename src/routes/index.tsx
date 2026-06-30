@@ -188,30 +188,30 @@ function Index() {
               Um espaço pensado para você desacelerar, ser ouvida e ver sua melhor versão emergir. Estética avançada, mãos atentas
               e um ritual sob medida — do primeiro toque ao último respiro.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <a
                 href="#agendar"
-                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-rose-deep)] px-7 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-cream)] shadow-gold transition hover:translate-y-[-2px] hover:bg-[var(--color-rose)]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-rose-deep)] px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-cream)] shadow-gold transition hover:translate-y-[-2px] hover:bg-[var(--color-rose)] sm:px-7 sm:text-xs sm:tracking-[0.22em]"
               >
                 Agende sua experiência
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="#tratamentos"
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-rose-deep)]/30 px-7 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-rose-deep)] transition hover:bg-[var(--color-rose-deep)]/5"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-rose-deep)]/30 px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-rose-deep)] transition hover:bg-[var(--color-rose-deep)]/5 sm:px-7 sm:text-xs sm:tracking-[0.22em]"
               >
                 Conheça os tratamentos
               </a>
             </div>
-            <div className="mt-10 flex items-center gap-8">
+            <div className="mt-10 flex flex-wrap items-center gap-5 sm:gap-8">
               <div>
-                <p className="font-display text-3xl text-[var(--color-rose-deep)]">+8</p>
-                <p className="text-xs uppercase tracking-[0.2em] text-foreground/60">Especialidades</p>
+                <p className="font-display text-2xl text-[var(--color-rose-deep)] sm:text-3xl">+8</p>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-foreground/60 sm:text-xs sm:tracking-[0.2em]">Especialidades</p>
               </div>
               <div className="h-10 w-px bg-border" />
               <div>
-                <p className="font-display text-3xl text-[var(--color-rose-deep)]">+460</p>
-                <p className="text-xs uppercase tracking-[0.2em] text-foreground/60">Clientes ativas</p>
+                <p className="font-display text-2xl text-[var(--color-rose-deep)] sm:text-3xl">+460</p>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-foreground/60 sm:text-xs sm:tracking-[0.2em]">Clientes ativas</p>
               </div>
               <div className="h-10 w-px bg-border" />
               <div className="flex items-center gap-1.5">
