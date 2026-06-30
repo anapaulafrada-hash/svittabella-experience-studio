@@ -180,7 +180,7 @@ function Index() {
                 Beleza Integrada · Santo André
               </span>
             </div>
-            <h1 className="mt-6 font-display text-5xl leading-[1.05] text-[var(--color-rose-deep)] md:text-7xl">
+            <h1 className="mt-6 font-display text-[2.5rem] leading-[1.05] text-[var(--color-rose-deep)] sm:text-5xl md:text-7xl">
               Onde a sua beleza
               <span className="block italic text-gradient-gold">floresce em cuidado.</span>
             </h1>
