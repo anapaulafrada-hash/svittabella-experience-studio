@@ -364,7 +364,7 @@ function Index() {
 
           <div>
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold-light)]">A Experiência Vitta Bella</p>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
               Do primeiro toque <span className="italic text-[var(--color-gold-light)]">ao último respiro.</span>
             </h2>
             <p className="mt-5 text-[var(--color-cream)]/80">
