@@ -280,12 +280,12 @@ function Index() {
       </section>
 
       {/* TREATMENTS */}
-      <section id="tratamentos" className="relative py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-end justify-between gap-6 md:flex-row md:items-end">
+      <section id="tratamentos" className="relative py-16 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div className="max-w-xl">
               <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">Tratamentos</p>
-              <h2 className="mt-4 font-display text-4xl text-[var(--color-rose-deep)] md:text-5xl">
+              <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
                 Procedimentos estéticos <span className="italic">para cuidar de você.</span>
               </h2>
             </div>
