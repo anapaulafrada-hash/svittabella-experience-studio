@@ -108,12 +108,12 @@ function Index() {
           scrolled ? "bg-background/85 backdrop-blur-md shadow-[0_1px_0_0_var(--color-border)]" : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Spazio Vitta Bella" className="h-12 w-12 rounded-full object-cover ring-1 ring-[var(--color-gold)]/40" />
-            <div className="leading-tight">
-              <p className="font-display text-lg text-[var(--color-rose-deep)]">Spazio Vitta Bella</p>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--color-gold)]">Estética · Santo André</p>
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
+          <a href="#top" className="flex min-w-0 items-center gap-2 sm:gap-3">
+            <img src={logoAsset.url} alt="Spazio Vitta Bella" className="h-10 w-10 shrink-0 rounded-full object-cover ring-1 ring-[var(--color-gold)]/40 sm:h-12 sm:w-12" />
+            <div className="min-w-0 leading-tight">
+              <p className="truncate font-display text-base text-[var(--color-rose-deep)] sm:text-lg">Spazio Vitta Bella</p>
+              <p className="truncate text-[9px] uppercase tracking-[0.22em] text-[var(--color-gold)] sm:text-[10px] sm:tracking-[0.25em]">Estética · Santo André</p>
             </div>
           </a>
           <nav className="hidden items-center gap-9 md:flex">
@@ -136,7 +136,7 @@ function Index() {
             Agendar
             <ArrowRight className="h-3.5 w-3.5" />
           </a>
-          <button className="md:hidden text-[var(--color-rose-deep)]" onClick={() => setOpen((v) => !v)} aria-label="Menu">
+          <button className="shrink-0 p-2 text-[var(--color-rose-deep)] md:hidden" onClick={() => setOpen((v) => !v)} aria-label="Menu">
             {open ? <X /> : <Menu />}
           </button>
         </div>
@@ -161,7 +161,7 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section id="top" className="relative overflow-hidden bg-gradient-blush pt-32 pb-24 md:pt-40 md:pb-32">
+      <section id="top" className="relative overflow-hidden bg-gradient-blush pt-28 pb-16 sm:pt-32 sm:pb-24 md:pt-40 md:pb-32">
         <div
           aria-hidden
           className="pointer-events-none absolute -top-32 -right-32 h-[480px] w-[480px] rounded-full opacity-50 blur-3xl"
@@ -172,7 +172,7 @@ function Index() {
           className="pointer-events-none absolute -bottom-32 -left-32 h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
           style={{ background: "radial-gradient(closest-side, var(--color-rose), transparent)" }}
         />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 md:grid-cols-12">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-6 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-[var(--color-gold)]/40 bg-background/60 px-4 py-1.5 backdrop-blur-sm">
               <Sparkles className="h-3.5 w-3.5 text-[var(--color-gold)]" />
@@ -180,7 +180,7 @@ function Index() {
                 Beleza Integrada · Santo André
               </span>
             </div>
-            <h1 className="mt-6 font-display text-5xl leading-[1.05] text-[var(--color-rose-deep)] md:text-7xl">
+            <h1 className="mt-6 font-display text-[2.5rem] leading-[1.05] text-[var(--color-rose-deep)] sm:text-5xl md:text-7xl">
               Onde a sua beleza
               <span className="block italic text-gradient-gold">floresce em cuidado.</span>
             </h1>
@@ -188,30 +188,30 @@ function Index() {
               Um espaço pensado para você desacelerar, ser ouvida e ver sua melhor versão emergir. Estética avançada, mãos atentas
               e um ritual sob medida — do primeiro toque ao último respiro.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <a
                 href="#agendar"
-                className="inline-flex items-center gap-2 rounded-full bg-[var(--color-rose-deep)] px-7 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-cream)] shadow-gold transition hover:translate-y-[-2px] hover:bg-[var(--color-rose)]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-rose-deep)] px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-cream)] shadow-gold transition hover:translate-y-[-2px] hover:bg-[var(--color-rose)] sm:px-7 sm:text-xs sm:tracking-[0.22em]"
               >
                 Agende sua experiência
                 <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="#tratamentos"
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--color-rose-deep)]/30 px-7 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-rose-deep)] transition hover:bg-[var(--color-rose-deep)]/5"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-rose-deep)]/30 px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-rose-deep)] transition hover:bg-[var(--color-rose-deep)]/5 sm:px-7 sm:text-xs sm:tracking-[0.22em]"
               >
                 Conheça os tratamentos
               </a>
             </div>
-            <div className="mt-10 flex items-center gap-8">
+            <div className="mt-10 flex flex-wrap items-center gap-5 sm:gap-8">
               <div>
-                <p className="font-display text-3xl text-[var(--color-rose-deep)]">+8</p>
-                <p className="text-xs uppercase tracking-[0.2em] text-foreground/60">Especialidades</p>
+                <p className="font-display text-2xl text-[var(--color-rose-deep)] sm:text-3xl">+8</p>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-foreground/60 sm:text-xs sm:tracking-[0.2em]">Especialidades</p>
               </div>
               <div className="h-10 w-px bg-border" />
               <div>
-                <p className="font-display text-3xl text-[var(--color-rose-deep)]">+460</p>
-                <p className="text-xs uppercase tracking-[0.2em] text-foreground/60">Clientes ativas</p>
+                <p className="font-display text-2xl text-[var(--color-rose-deep)] sm:text-3xl">+460</p>
+                <p className="text-[10px] uppercase tracking-[0.18em] text-foreground/60 sm:text-xs sm:tracking-[0.2em]">Clientes ativas</p>
               </div>
               <div className="h-10 w-px bg-border" />
               <div className="flex items-center gap-1.5">
@@ -248,11 +248,11 @@ function Index() {
       </section>
 
       {/* PILLARS */}
-      <section id="espaco" className="bg-[var(--color-cream)] py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="espaco" className="bg-[var(--color-cream)] py-16 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">O Espaço</p>
-            <h2 className="mt-4 font-display text-4xl text-[var(--color-rose-deep)] md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
               Um refúgio de elegância <span className="italic">e cuidado.</span>
             </h2>
             <p className="mt-5 text-foreground/70">
@@ -280,12 +280,12 @@ function Index() {
       </section>
 
       {/* TREATMENTS */}
-      <section id="tratamentos" className="relative py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-col items-end justify-between gap-6 md:flex-row md:items-end">
+      <section id="tratamentos" className="relative py-16 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div className="max-w-xl">
               <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">Tratamentos</p>
-              <h2 className="mt-4 font-display text-4xl text-[var(--color-rose-deep)] md:text-5xl">
+              <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
                 Procedimentos estéticos <span className="italic">para cuidar de você.</span>
               </h2>
             </div>
@@ -340,7 +340,7 @@ function Index() {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experiencia" className="relative overflow-hidden bg-[var(--color-rose-deep)] py-24 text-[var(--color-cream)] md:py-32">
+      <section id="experiencia" className="relative overflow-hidden bg-[var(--color-rose-deep)] py-16 text-[var(--color-cream)] sm:py-24 md:py-32">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-30"
@@ -349,12 +349,12 @@ function Index() {
               "radial-gradient(at 20% 20%, var(--color-gold) 0, transparent 40%), radial-gradient(at 80% 80%, var(--color-rose) 0, transparent 45%)",
           }}
         />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 md:grid-cols-2">
+        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-6 md:grid-cols-2">
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] ring-1 ring-[var(--color-gold)]/40 shadow-soft">
               <img src={lotusImg} alt="Detalhe lótus" width={1200} height={1200} loading="lazy" className="aspect-square w-full object-cover" />
             </div>
-            <div className="absolute -bottom-8 -right-4 max-w-[16rem] rounded-2xl bg-[var(--color-cream)] p-5 text-[var(--color-rose-deep)] shadow-soft md:-right-8">
+            <div className="absolute -bottom-6 left-4 right-4 max-w-[16rem] rounded-2xl bg-[var(--color-cream)] p-4 text-[var(--color-rose-deep)] shadow-soft sm:-bottom-8 sm:left-auto sm:right-4 sm:p-5 md:-right-8">
               <Quote className="h-5 w-5 text-[var(--color-gold)]" />
               <p className="mt-2 font-display text-base italic">
                 "Não é um procedimento. É um ritual de retorno a si mesma."
@@ -364,7 +364,7 @@ function Index() {
 
           <div>
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold-light)]">A Experiência Vitta Bella</p>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl sm:text-4xl md:text-5xl">
               Do primeiro toque <span className="italic text-[var(--color-gold-light)]">ao último respiro.</span>
             </h2>
             <p className="mt-5 text-[var(--color-cream)]/80">
@@ -395,11 +395,11 @@ function Index() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section id="depoimentos" className="bg-gradient-blush py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-6">
+      <section id="depoimentos" className="bg-gradient-blush py-16 sm:py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">Depoimentos</p>
-            <h2 className="mt-4 font-display text-4xl text-[var(--color-rose-deep)] md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
               Histórias de transformação <span className="italic">e cuidado.</span>
             </h2>
           </div>
@@ -424,11 +424,11 @@ function Index() {
       </section>
 
       {/* VISIT / CTA */}
-      <section id="visite" className="py-24 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
+      <section id="visite" className="py-16 sm:py-24 md:py-32">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 md:grid-cols-2">
           <div id="agendar">
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">Agende sua visita</p>
-            <h2 className="mt-4 font-display text-4xl text-[var(--color-rose-deep)] md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
               Sua transformação <span className="italic">começa aqui.</span>
             </h2>
             <p className="mt-5 max-w-md text-foreground/70">
@@ -439,14 +439,14 @@ function Index() {
             <div className="mt-10 space-y-5">
               <a
                 href="tel:+5511978813648"
-                className="flex items-center gap-4 rounded-2xl border border-border bg-background p-5 transition hover:border-[var(--color-gold)]/60 hover:shadow-soft"
+                className="flex items-center gap-4 rounded-2xl border border-border bg-background p-4 transition hover:border-[var(--color-gold)]/60 hover:shadow-soft sm:p-5"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-rose)]/12 text-[var(--color-rose-deep)]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-rose)]/12 text-[var(--color-rose-deep)]">
                   <Phone className="h-5 w-5" />
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.22em] text-foreground/60">Agendamento</p>
-                  <p className="font-display text-xl text-[var(--color-rose-deep)]">(11) 97881-3648</p>
+                <div className="min-w-0">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-foreground/60 sm:text-xs">Agendamento</p>
+                  <p className="truncate font-display text-lg text-[var(--color-rose-deep)] sm:text-xl">(11) 97881-3648</p>
                 </div>
               </a>
 
@@ -454,24 +454,24 @@ function Index() {
                 href="https://www.trinks.com/vitta-bella1"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 rounded-2xl border border-border bg-background p-5 transition hover:border-[var(--color-gold)]/60 hover:shadow-soft"
+                className="flex items-center gap-4 rounded-2xl border border-border bg-background p-4 transition hover:border-[var(--color-gold)]/60 hover:shadow-soft sm:p-5"
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-gold)]/15 text-[var(--color-gold)]">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-gold)]/15 text-[var(--color-gold)]">
                   <Clock className="h-5 w-5" />
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.22em] text-foreground/60">Agendamento online</p>
-                  <p className="font-display text-xl text-[var(--color-rose-deep)]">trinks.com/vitta-bella1</p>
+                <div className="min-w-0">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-foreground/60 sm:text-xs">Agendamento online</p>
+                  <p className="truncate font-display text-lg text-[var(--color-rose-deep)] sm:text-xl">trinks.com/vitta-bella1</p>
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 rounded-2xl border border-border bg-background p-5">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--color-leaf)]/12 text-[var(--color-leaf)]">
+              <div className="flex items-center gap-4 rounded-2xl border border-border bg-background p-4 sm:p-5">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-leaf)]/12 text-[var(--color-leaf)]">
                   <MapPin className="h-5 w-5" />
                 </div>
-                <div>
-                  <p className="text-xs uppercase tracking-[0.22em] text-foreground/60">Localização</p>
-                  <p className="font-display text-xl text-[var(--color-rose-deep)]">Santo André · SP</p>
+                <div className="min-w-0">
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-foreground/60 sm:text-xs">Localização</p>
+                  <p className="truncate font-display text-lg text-[var(--color-rose-deep)] sm:text-xl">Santo André · SP</p>
                 </div>
               </div>
 
@@ -502,7 +502,7 @@ function Index() {
 
       {/* FOOTER */}
       <footer className="border-t border-border bg-[var(--color-cream)] py-12">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-6 md:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 text-center sm:px-6 md:flex-row md:text-left">
           <div className="flex items-center gap-3">
             <img src={logoAsset.url} alt="Spazio Vitta Bella" className="h-10 w-10 rounded-full object-cover ring-1 ring-[var(--color-gold)]/40" />
             <div>
