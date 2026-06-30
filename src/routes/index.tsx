@@ -424,11 +424,11 @@ function Index() {
       </section>
 
       {/* VISIT / CTA */}
-      <section id="visite" className="py-24 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2">
+      <section id="visite" className="py-16 sm:py-24 md:py-32">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 md:grid-cols-2">
           <div id="agendar">
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">Agende sua visita</p>
-            <h2 className="mt-4 font-display text-4xl text-[var(--color-rose-deep)] md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
               Sua transformação <span className="italic">começa aqui.</span>
             </h2>
             <p className="mt-5 max-w-md text-foreground/70">
