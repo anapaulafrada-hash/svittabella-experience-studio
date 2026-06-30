@@ -161,7 +161,7 @@ function Index() {
       </header>
 
       {/* HERO */}
-      <section id="top" className="relative overflow-hidden bg-gradient-blush pt-32 pb-24 md:pt-40 md:pb-32">
+      <section id="top" className="relative overflow-hidden bg-gradient-blush pt-28 pb-16 sm:pt-32 sm:pb-24 md:pt-40 md:pb-32">
         <div
           aria-hidden
           className="pointer-events-none absolute -top-32 -right-32 h-[480px] w-[480px] rounded-full opacity-50 blur-3xl"
