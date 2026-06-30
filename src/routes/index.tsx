@@ -108,12 +108,12 @@ function Index() {
           scrolled ? "bg-background/85 backdrop-blur-md shadow-[0_1px_0_0_var(--color-border)]" : "bg-transparent"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <a href="#top" className="flex items-center gap-3">
-            <img src={logoAsset.url} alt="Spazio Vitta Bella" className="h-12 w-12 rounded-full object-cover ring-1 ring-[var(--color-gold)]/40" />
-            <div className="leading-tight">
-              <p className="font-display text-lg text-[var(--color-rose-deep)]">Spazio Vitta Bella</p>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--color-gold)]">Estética · Santo André</p>
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
+          <a href="#top" className="flex min-w-0 items-center gap-2 sm:gap-3">
+            <img src={logoAsset.url} alt="Spazio Vitta Bella" className="h-10 w-10 shrink-0 rounded-full object-cover ring-1 ring-[var(--color-gold)]/40 sm:h-12 sm:w-12" />
+            <div className="min-w-0 leading-tight">
+              <p className="truncate font-display text-base text-[var(--color-rose-deep)] sm:text-lg">Spazio Vitta Bella</p>
+              <p className="truncate text-[9px] uppercase tracking-[0.22em] text-[var(--color-gold)] sm:text-[10px] sm:tracking-[0.25em]">Estética · Santo André</p>
             </div>
           </a>
           <nav className="hidden items-center gap-9 md:flex">
