@@ -340,7 +340,7 @@ function Index() {
       </section>
 
       {/* EXPERIENCE */}
-      <section id="experiencia" className="relative overflow-hidden bg-[var(--color-rose-deep)] py-24 text-[var(--color-cream)] md:py-32">
+      <section id="experiencia" className="relative overflow-hidden bg-[var(--color-rose-deep)] py-16 text-[var(--color-cream)] sm:py-24 md:py-32">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0 opacity-30"
