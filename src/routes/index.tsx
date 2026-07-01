@@ -51,15 +51,15 @@ export const Route = createFileRoute("/")({
 });
 
 const treatments = [
-  { name: "Lipoenzimática", desc: "Modelagem corporal que reduz medidas com ativos lipolíticos.", img: facialImg },
-  { name: "Botox", desc: "Suavização de linhas de expressão com aplicação especializada.", img: lashesImg },
-  { name: "Drenagem Linfática", desc: "Movimentos precisos que aliviam, desincham e renovam.", img: massageImg },
-  { name: "Limpeza de Pele", desc: "Protocolo profundo para uma pele radiante e equilibrada.", img: facialImg },
-  { name: "Massagem Modeladora 360", desc: "Esculpe e tonifica com técnica e pressão personalizadas.", img: massageImg },
-  { name: "Microagulhamento Facial", desc: "Estímulo de colágeno para uma pele firme e luminosa.", img: facialImg },
-  { name: "Preenchimento Facial", desc: "Volume e harmonia com ácido hialurônico de alta performance.", img: lashesImg },
-  { name: "Hena Labial", desc: "Lábios definidos, hidratados e com cor por mais tempo.", img: lashesImg },
-  { name: "Extensão de Cílios", desc: "Olhar marcante, fio a fio, com aplicação delicada.", img: lashesImg },
+  { name: "Lipoenzimática", desc: "Modelagem corporal que reduz medidas com ativos lipolíticos.", img: lipoenzimaticaImg },
+  { name: "Botox", desc: "Suavização de linhas de expressão com aplicação especializada.", img: botoxImg },
+  { name: "Drenagem Linfática", desc: "Movimentos precisos que aliviam, desincham e renovam.", img: drenagemImg },
+  { name: "Limpeza de Pele", desc: "Protocolo profundo para uma pele radiante e equilibrada.", img: limpezaPeleImg },
+  { name: "Massagem Modeladora 360", desc: "Esculpe e tonifica com técnica e pressão personalizadas.", img: massagemModeladoraImg },
+  { name: "Microagulhamento Facial", desc: "Estímulo de colágeno para uma pele firme e luminosa.", img: microagulhamentoImg },
+  { name: "Preenchimento Facial", desc: "Volume e harmonia com ácido hialurônico de alta performance.", img: preenchimentoImg },
+  { name: "Hena Labial", desc: "Lábios definidos, hidratados e com cor por mais tempo.", img: henaLabialImg },
+  { name: "Extensão de Cílios", desc: "Olhar marcante, fio a fio, com aplicação delicada.", img: ciliosImg },
 ];
 
 const pillars = [
