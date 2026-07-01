@@ -17,9 +17,15 @@ import {
 
 import logoAsset from "@/assets/vitta-bella-logo.asset.json";
 import heroImg from "@/assets/hero-spa.jpg";
-import facialImg from "@/assets/treatment-facial.jpg";
-import massageImg from "@/assets/treatment-massage.jpg";
-import lashesImg from "@/assets/treatment-lashes.jpg";
+import lipoenzimaticaImg from "@/assets/treatment-lipoenzimatica.jpg";
+import botoxImg from "@/assets/treatment-botox.jpg";
+import drenagemImg from "@/assets/treatment-drenagem.jpg";
+import limpezaPeleImg from "@/assets/treatment-limpeza-pele.jpg";
+import massagemModeladoraImg from "@/assets/treatment-massagem-modeladora.jpg";
+import microagulhamentoImg from "@/assets/treatment-microagulhamento.jpg";
+import preenchimentoImg from "@/assets/treatment-preenchimento.jpg";
+import henaLabialImg from "@/assets/treatment-hena-labial.jpg";
+import ciliosImg from "@/assets/treatment-cilios.jpg";
 import lotusImg from "@/assets/lotus-detail.jpg";
 
 export const Route = createFileRoute("/")({
