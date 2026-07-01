@@ -17,9 +17,15 @@ import {
 
 import logoAsset from "@/assets/vitta-bella-logo.asset.json";
 import heroImg from "@/assets/hero-spa.jpg";
-import facialImg from "@/assets/treatment-facial.jpg";
-import massageImg from "@/assets/treatment-massage.jpg";
-import lashesImg from "@/assets/treatment-lashes.jpg";
+import lipoenzimaticaImg from "@/assets/treatment-lipoenzimatica.jpg";
+import botoxImg from "@/assets/treatment-botox.jpg";
+import drenagemImg from "@/assets/treatment-drenagem.jpg";
+import limpezaPeleImg from "@/assets/treatment-limpeza-pele.jpg";
+import massagemModeladoraImg from "@/assets/treatment-massagem-modeladora.jpg";
+import microagulhamentoImg from "@/assets/treatment-microagulhamento.jpg";
+import preenchimentoImg from "@/assets/treatment-preenchimento.jpg";
+import henaLabialImg from "@/assets/treatment-hena-labial.jpg";
+import ciliosImg from "@/assets/treatment-cilios.jpg";
 import lotusImg from "@/assets/lotus-detail.jpg";
 
 export const Route = createFileRoute("/")({
@@ -45,15 +51,15 @@ export const Route = createFileRoute("/")({
 });
 
 const treatments = [
-  { name: "Lipoenzimática", desc: "Modelagem corporal que reduz medidas com ativos lipolíticos.", img: facialImg },
-  { name: "Botox", desc: "Suavização de linhas de expressão com aplicação especializada.", img: lashesImg },
-  { name: "Drenagem Linfática", desc: "Movimentos precisos que aliviam, desincham e renovam.", img: massageImg },
-  { name: "Limpeza de Pele", desc: "Protocolo profundo para uma pele radiante e equilibrada.", img: facialImg },
-  { name: "Massagem Modeladora 360", desc: "Esculpe e tonifica com técnica e pressão personalizadas.", img: massageImg },
-  { name: "Microagulhamento Facial", desc: "Estímulo de colágeno para uma pele firme e luminosa.", img: facialImg },
-  { name: "Preenchimento Facial", desc: "Volume e harmonia com ácido hialurônico de alta performance.", img: lashesImg },
-  { name: "Hena Labial", desc: "Lábios definidos, hidratados e com cor por mais tempo.", img: lashesImg },
-  { name: "Extensão de Cílios", desc: "Olhar marcante, fio a fio, com aplicação delicada.", img: lashesImg },
+  { name: "Lipoenzimática", desc: "Modelagem corporal que reduz medidas com ativos lipolíticos.", img: lipoenzimaticaImg },
+  { name: "Botox", desc: "Suavização de linhas de expressão com aplicação especializada.", img: botoxImg },
+  { name: "Drenagem Linfática", desc: "Movimentos precisos que aliviam, desincham e renovam.", img: drenagemImg },
+  { name: "Limpeza de Pele", desc: "Protocolo profundo para uma pele radiante e equilibrada.", img: limpezaPeleImg },
+  { name: "Massagem Modeladora 360", desc: "Esculpe e tonifica com técnica e pressão personalizadas.", img: massagemModeladoraImg },
+  { name: "Microagulhamento Facial", desc: "Estímulo de colágeno para uma pele firme e luminosa.", img: microagulhamentoImg },
+  { name: "Preenchimento Facial", desc: "Volume e harmonia com ácido hialurônico de alta performance.", img: preenchimentoImg },
+  { name: "Hena Labial", desc: "Lábios definidos, hidratados e com cor por mais tempo.", img: henaLabialImg },
+  { name: "Extensão de Cílios", desc: "Olhar marcante, fio a fio, com aplicação delicada.", img: ciliosImg },
 ];
 
 const pillars = [
@@ -489,7 +495,7 @@ function Index() {
           <div className="relative">
             <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[var(--color-rose)]/15 to-[var(--color-gold-light)]/30 blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-[var(--color-gold)]/40">
-              <img src={facialImg} alt="Cuidado facial" width={1200} height={1400} loading="lazy" className="aspect-[4/5] w-full object-cover" />
+              <img src={limpezaPeleImg} alt="Cuidado facial" width={1200} height={1400} loading="lazy" className="aspect-[4/5] w-full object-cover" />
             </div>
             <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-background/90 p-5 backdrop-blur ring-1 ring-border">
               <p className="font-display text-base italic text-[var(--color-rose-deep)]">
