@@ -495,7 +495,7 @@ function Index() {
           <div className="relative">
             <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[var(--color-rose)]/15 to-[var(--color-gold-light)]/30 blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-[var(--color-gold)]/40">
-              <img src={facialImg} alt="Cuidado facial" width={1200} height={1400} loading="lazy" className="aspect-[4/5] w-full object-cover" />
+              <img src={limpezaPeleImg} alt="Cuidado facial" width={1200} height={1400} loading="lazy" className="aspect-[4/5] w-full object-cover" />
             </div>
             <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-background/90 p-5 backdrop-blur ring-1 ring-border">
               <p className="font-display text-base italic text-[var(--color-rose-deep)]">
