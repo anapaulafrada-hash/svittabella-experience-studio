@@ -402,7 +402,7 @@ function Index() {
                   </div>
                   <div className="overflow-hidden rounded-[1.25rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
                     <img
-                      src={pilatesSoloAsset.url}
+                      src={pilatesSoloImg}
                       alt="Pilates solo e core"
                       loading="lazy"
                       className="aspect-square w-full object-cover"
