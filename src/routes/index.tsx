@@ -394,7 +394,7 @@ function Index() {
                 <div className="col-span-2 flex flex-col gap-3 sm:gap-4">
                   <div className="overflow-hidden rounded-[1.25rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
                     <img
-                      src={pilatesForcaAsset.url}
+                      src={pilatesForcaImg}
                       alt="Aula de Pilates — força e alongamento"
                       loading="lazy"
                       className="aspect-square w-full object-cover"
