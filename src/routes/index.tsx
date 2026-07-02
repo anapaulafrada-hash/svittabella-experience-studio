@@ -353,6 +353,132 @@ function Index() {
         </div>
       </section>
 
+      {/* PILATES */}
+      <section id="pilates" className="relative overflow-hidden bg-[var(--color-cream)] py-16 sm:py-24 md:py-32">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-24 -left-24 h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
+          style={{ background: "radial-gradient(closest-side, var(--color-leaf), transparent)" }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-24 -right-24 h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
+          style={{ background: "radial-gradient(closest-side, var(--color-gold-light), transparent)" }}
+        />
+
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.32em] text-[var(--color-leaf)]">
+              <Leaf className="h-3.5 w-3.5" /> Spazio Pilates · Santo André
+            </p>
+            <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
+              Movimento que <span className="italic text-gradient-gold">cura, fortalece e liberta.</span>
+            </h2>
+            <p className="mt-5 text-foreground/70">
+              Aqui, cuidar da beleza caminha junto com cuidar da saúde. Nosso estúdio de Pilates é um convite para você reencontrar
+              o seu corpo — respirar melhor, ganhar mobilidade, aliviar dores e trazer leveza para o dia a dia.
+            </p>
+          </div>
+
+          <div className="mt-14 grid items-center gap-10 md:grid-cols-2 md:gap-14">
+            <div className="relative">
+              <div className="grid grid-cols-5 gap-3 sm:gap-4">
+                <div className="col-span-3 overflow-hidden rounded-[1.5rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
+                  <img
+                    src={pilatesStudioAsset.url}
+                    alt="Estúdio de Pilates Spazio Vitta Bella"
+                    loading="lazy"
+                    className="aspect-[4/5] w-full object-cover"
+                  />
+                </div>
+                <div className="col-span-2 flex flex-col gap-3 sm:gap-4">
+                  <div className="overflow-hidden rounded-[1.25rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
+                    <img
+                      src={pilatesForcaAsset.url}
+                      alt="Aula de Pilates — força e alongamento"
+                      loading="lazy"
+                      className="aspect-square w-full object-cover"
+                    />
+                  </div>
+                  <div className="overflow-hidden rounded-[1.25rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
+                    <img
+                      src={pilatesSoloAsset.url}
+                      alt="Pilates solo e core"
+                      loading="lazy"
+                      className="aspect-square w-full object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-5 left-4 hidden items-center gap-3 rounded-2xl bg-background/95 px-4 py-3 shadow-soft ring-1 ring-border backdrop-blur sm:flex">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--color-leaf)]/15 text-[var(--color-leaf)]">
+                  <Heart className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-[10px] uppercase tracking-[0.22em] text-foreground/60">Corpo & mente</p>
+                  <p className="font-display text-base text-[var(--color-rose-deep)]">Saúde em movimento</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p className="font-display text-2xl italic text-[var(--color-rose-deep)] sm:text-3xl">
+                "O corpo precisa se exercitar constantemente — faz bem para a mente, para a postura e para a alma."
+              </p>
+
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+                {[
+                  { icon: Activity, title: "Postura & Coluna", text: "Alívio de dores, mais mobilidade e consciência corporal." },
+                  { icon: Heart, title: "Saúde do Coração", text: "Movimento consciente que oxigena, energiza e reduz o estresse." },
+                  { icon: Sparkles, title: "Força & Tônus", text: "Fortalecimento profundo com o método Pilates original." },
+                  { icon: Flower2, title: "Leveza & Bem-estar", text: "Respiração, foco e conexão com o próprio corpo." },
+                ].map(({ icon: Icon, title, text }) => (
+                  <li
+                    key={title}
+                    className="rounded-2xl border border-[var(--color-gold)]/20 bg-background p-5 transition hover:border-[var(--color-leaf)]/50 hover:shadow-soft"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-leaf)]/12 text-[var(--color-leaf)]">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <p className="mt-3 font-display text-lg text-[var(--color-rose-deep)]">{title}</p>
+                    <p className="mt-1 text-sm text-foreground/70">{text}</p>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="mt-8 rounded-3xl border border-[var(--color-gold)]/30 bg-gradient-blush p-6 sm:p-8">
+                <p className="font-display text-xl text-[var(--color-rose-deep)] sm:text-2xl">
+                  Venha viver essa experiência com a gente.
+                </p>
+                <p className="mt-2 text-sm text-foreground/70">
+                  Aulas em grupos reduzidos, com atenção individual. Estúdio equipado com Reformer, Cadillac, Chair e Barrel.
+                  Agende sua aula experimental e sinta a diferença já na primeira sessão.
+                </p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                  <a
+                    href="https://wa.me/5511978813648?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20aula%20experimental%20de%20Pilates."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-rose-deep)] px-6 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-cream)] shadow-gold transition hover:bg-[var(--color-rose)]"
+                  >
+                    Aula experimental
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/spaziopilates2026"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--color-rose-deep)]/30 px-6 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-rose-deep)] transition hover:bg-[var(--color-rose-deep)]/5"
+                  >
+                    <Instagram className="h-4 w-4" /> @spaziopilates2026
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* EXPERIENCE */}
       <section id="experiencia" className="relative overflow-hidden bg-[var(--color-rose-deep)] py-16 text-[var(--color-cream)] sm:py-24 md:py-32">
         <div
