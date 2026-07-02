@@ -30,9 +30,9 @@ import preenchimentoImg from "@/assets/treatment-preenchimento.jpg";
 import henaLabialImg from "@/assets/treatment-hena-labial.jpg";
 import ciliosImg from "@/assets/treatment-cilios.jpg";
 import lotusImg from "@/assets/lotus-detail.jpg";
-import pilatesStudioAsset from "@/assets/pilates-studio.jpg.asset.json";
-import pilatesSoloAsset from "@/assets/pilates-solo.jpg.asset.json";
-import pilatesForcaAsset from "@/assets/pilates-forca.jpg.asset.json";
+import pilatesStudioImg from "@/assets/pilates-studio.jpg";
+import pilatesSoloImg from "@/assets/pilates-solo.jpg";
+import pilatesForcaImg from "@/assets/pilates-forca.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -385,7 +385,7 @@ function Index() {
               <div className="grid grid-cols-5 gap-3 sm:gap-4">
                 <div className="col-span-3 overflow-hidden rounded-[1.5rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
                   <img
-                    src={pilatesStudioAsset.url}
+                    src={pilatesStudioImg}
                     alt="Estúdio de Pilates Spazio Vitta Bella"
                     loading="lazy"
                     className="aspect-[4/5] w-full object-cover"
@@ -394,7 +394,7 @@ function Index() {
                 <div className="col-span-2 flex flex-col gap-3 sm:gap-4">
                   <div className="overflow-hidden rounded-[1.25rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
                     <img
-                      src={pilatesForcaAsset.url}
+                      src={pilatesForcaImg}
                       alt="Aula de Pilates — força e alongamento"
                       loading="lazy"
                       className="aspect-square w-full object-cover"
@@ -402,7 +402,7 @@ function Index() {
                   </div>
                   <div className="overflow-hidden rounded-[1.25rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
                     <img
-                      src={pilatesSoloAsset.url}
+                      src={pilatesSoloImg}
                       alt="Pilates solo e core"
                       loading="lazy"
                       className="aspect-square w-full object-cover"
