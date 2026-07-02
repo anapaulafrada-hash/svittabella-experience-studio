@@ -30,9 +30,9 @@ import preenchimentoImg from "@/assets/treatment-preenchimento.jpg";
 import henaLabialImg from "@/assets/treatment-hena-labial.jpg";
 import ciliosImg from "@/assets/treatment-cilios.jpg";
 import lotusImg from "@/assets/lotus-detail.jpg";
-import pilatesStudioAsset from "@/assets/pilates-studio.jpg.asset.json";
-import pilatesSoloAsset from "@/assets/pilates-solo.jpg.asset.json";
-import pilatesForcaAsset from "@/assets/pilates-forca.jpg.asset.json";
+import pilatesStudioImg from "@/assets/pilates-studio.jpg";
+import pilatesSoloImg from "@/assets/pilates-solo.jpg";
+import pilatesForcaImg from "@/assets/pilates-forca.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
