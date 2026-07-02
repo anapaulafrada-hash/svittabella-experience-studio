@@ -132,6 +132,7 @@ function Index() {
             {[
               ["O Espaço", "#espaco"],
               ["Tratamentos", "#tratamentos"],
+              ["Pilates", "#pilates"],
               ["Experiência", "#experiencia"],
               ["Depoimentos", "#depoimentos"],
               ["Visite", "#visite"],
@@ -158,6 +159,7 @@ function Index() {
               {[
                 ["O Espaço", "#espaco"],
                 ["Tratamentos", "#tratamentos"],
+                ["Pilates", "#pilates"],
                 ["Experiência", "#experiencia"],
                 ["Depoimentos", "#depoimentos"],
                 ["Visite", "#visite"],
