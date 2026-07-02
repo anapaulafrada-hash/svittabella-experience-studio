@@ -385,7 +385,7 @@ function Index() {
               <div className="grid grid-cols-5 gap-3 sm:gap-4">
                 <div className="col-span-3 overflow-hidden rounded-[1.5rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
                   <img
-                    src={pilatesStudioAsset.url}
+                    src={pilatesStudioImg}
                     alt="Estúdio de Pilates Spazio Vitta Bella"
                     loading="lazy"
                     className="aspect-[4/5] w-full object-cover"
