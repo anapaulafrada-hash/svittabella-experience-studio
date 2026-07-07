@@ -32,8 +32,8 @@ import lotusImg from "@/assets/lotus-detail.jpg";
 import pilatesStudioImg from "@/assets/pilates-studio.jpg";
 import pilatesSoloImg from "@/assets/pilates-solo.jpg";
 import pilatesForcaImg from "@/assets/pilates-forca.jpg";
+import logoUrl from "@/assets/spazio-vitta-bella-logo.png";
 
-const logoUrl = "/spazio-vitta-bella-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
