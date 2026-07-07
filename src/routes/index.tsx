@@ -18,7 +18,6 @@ import {
   Leaf,
 } from "lucide-react";
 
-import logoAsset from "@/assets/vitta-bella-logo.asset.json";
 import heroImg from "@/assets/hero-spa.jpg";
 import lipoenzimaticaImg from "@/assets/treatment-lipoenzimatica.jpg";
 import botoxImg from "@/assets/treatment-botox.jpg";
@@ -33,6 +32,8 @@ import lotusImg from "@/assets/lotus-detail.jpg";
 import pilatesStudioImg from "@/assets/pilates-studio.jpg";
 import pilatesSoloImg from "@/assets/pilates-solo.jpg";
 import pilatesForcaImg from "@/assets/pilates-forca.jpg";
+
+const logoUrl = "/spazio-vitta-bella-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -49,8 +50,8 @@ export const Route = createFileRoute("/")({
         content:
           "Um espaço dedicado à sua beleza integrada. Tratamentos faciais, corporais e bem-estar com toque de luxo.",
       },
-      { property: "og:image", content: logoAsset.url },
-      { name: "twitter:image", content: logoAsset.url },
+      { property: "og:image", content: "https://svittabella-experience-studio.lovable.app/spazio-vitta-bella-logo.png" },
+      { name: "twitter:image", content: "https://svittabella-experience-studio.lovable.app/spazio-vitta-bella-logo.png" },
     ],
   }),
   component: Index,
@@ -122,7 +123,7 @@ function Index() {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 sm:py-4">
           <a href="#top" className="flex min-w-0 items-center gap-2 sm:gap-3">
-            <img src={logoAsset.url} alt="Spazio Vitta Bella" className="h-10 w-10 shrink-0 rounded-full object-cover ring-1 ring-[var(--color-gold)]/40 sm:h-12 sm:w-12" />
+            <img src={logoUrl} alt="Spazio Vitta Bella" className="h-10 w-auto shrink-0 object-contain sm:h-12" />
             <div className="min-w-0 leading-tight">
               <p className="truncate font-display text-base text-[var(--color-rose-deep)] sm:text-lg">Spazio Vitta Bella</p>
               <p className="truncate text-[9px] uppercase tracking-[0.22em] text-[var(--color-gold)] sm:text-[10px] sm:tracking-[0.25em]">Estética · Santo André</p>
