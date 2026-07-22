@@ -53,6 +53,7 @@ export const Route = createFileRoute("/")({
       { property: "og:url", content: "https://www.spaziovittabella.com.br/" },
       { property: "og:image", content: "https://www.spaziovittabella.com.br/spazio-vitta-bella-logo.png" },
       { name: "twitter:image", content: "https://www.spaziovittabella.com.br/spazio-vitta-bella-logo.png" },
+      { name: "robots", content: "index, follow" },
     ],
     links: [{ rel: "canonical", href: "https://www.spaziovittabella.com.br/" }],
     scripts: [
@@ -60,7 +61,7 @@ export const Route = createFileRoute("/")({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": "BeautySalon",
           name: "Spazio Vitta Bella",
           description:
             "Espaço de estética avançada, beleza integrada e Pilates em Santo André.",
