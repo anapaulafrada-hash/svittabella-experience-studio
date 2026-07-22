@@ -50,12 +50,59 @@ export const Route = createFileRoute("/")({
         content:
           "Um espaço dedicado à sua beleza integrada. Tratamentos faciais, corporais e bem-estar com toque de luxo.",
       },
-      { property: "og:image", content: "https://svittabella-experience-studio.lovable.app/spazio-vitta-bella-logo.png" },
-      { name: "twitter:image", content: "https://svittabella-experience-studio.lovable.app/spazio-vitta-bella-logo.png" },
+      { property: "og:url", content: "https://www.spaziovittabella.com.br/" },
+      { property: "og:image", content: "https://www.spaziovittabella.com.br/spazio-vitta-bella-logo.png" },
+      { name: "twitter:image", content: "https://www.spaziovittabella.com.br/spazio-vitta-bella-logo.png" },
+    ],
+    links: [{ rel: "canonical", href: "https://www.spaziovittabella.com.br/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Spazio Vitta Bella",
+          description:
+            "Espaço de estética avançada, beleza integrada e Pilates em Santo André.",
+          image: "https://www.spaziovittabella.com.br/spazio-vitta-bella-logo.png",
+          url: "https://www.spaziovittabella.com.br",
+          telephone: "+55-11-97881-3648",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Santo André",
+            addressRegion: "SP",
+            addressCountry: "BR",
+          },
+          sameAs: [
+            "https://www.instagram.com/svittabella",
+            "https://www.instagram.com/spaziopilates2026",
+          ],
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Tratamentos",
+            itemListElement: [
+              "Lipoenzimática",
+              "Botox",
+              "Drenagem Linfática",
+              "Limpeza de Pele",
+              "Massagem Modeladora 360",
+              "Microagulhamento Facial",
+              "Preenchimento Facial",
+              "Hena Labial",
+              "Extensão de Cílios",
+              "Pilates",
+            ].map((n) => ({
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name: n },
+            })),
+          },
+        }),
+      },
     ],
   }),
   component: Index,
 });
+
 
 const treatments = [
   { name: "Lipoenzimática", desc: "Modelagem corporal que reduz medidas com ativos lipolíticos.", img: lipoenzimaticaImg },
