@@ -124,6 +124,7 @@ const treatments: { name: string; desc: string; img?: string; alt?: string; cta?
     desc: "Renovação suave da pele por meio da remoção de células mortas e pelos finos da face, ajudando a deixar a pele com aparência mais lisa, macia e iluminada. Ideal para quem busca uma pele mais uniforme e preparada para receber melhor os cuidados de skincare. Os resultados podem variar de acordo com cada pele e avaliação profissional.",
     img: dermaplaningAsset.url,
     alt: "Tratamento de Dermaplaning no Spazio Vitta Bella em Santo André",
+    badge: "Novo",
   },
 ];
 
