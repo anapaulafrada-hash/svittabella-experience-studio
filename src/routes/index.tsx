@@ -109,7 +109,7 @@ export const Route = createFileRoute("/")({
 });
 
 
-const treatments: { name: string; desc: string; img?: string; alt?: string; cta?: { label: string; href: string } }[] = [
+const treatments: { name: string; desc: string; img?: string; alt?: string; cta?: { label: string; href: string }; badge?: string }[] = [
   { name: "Lipoenzimática", desc: "Modelagem corporal que reduz medidas com ativos lipolíticos.", img: lipoenzimaticaImg },
   { name: "Botox", desc: "Suavização de linhas de expressão com aplicação especializada.", img: botoxImg },
   { name: "Drenagem Linfática", desc: "Movimentos precisos que aliviam, desincham e renovam.", img: drenagemImg },
