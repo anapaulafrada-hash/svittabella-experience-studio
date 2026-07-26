@@ -28,7 +28,7 @@ import microagulhamentoImg from "@/assets/treatment-microagulhamento.jpg";
 import preenchimentoImg from "@/assets/treatment-preenchimento.jpg";
 import henaLabialImg from "@/assets/treatment-hena-labial.jpg";
 import ciliosImg from "@/assets/treatment-cilios.jpg";
-import dermaplaningImg from "@/assets/treatment-dermaplaning.jpg";
+
 import lotusImg from "@/assets/lotus-detail.jpg";
 import pilatesStudioImg from "@/assets/pilates-studio.jpg";
 import pilatesSoloImg from "@/assets/pilates-solo.jpg";
