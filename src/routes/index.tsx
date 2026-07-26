@@ -445,31 +445,46 @@ function Index() {
           className="pointer-events-none absolute -top-24 -right-24 h-[360px] w-[360px] rounded-full opacity-30 blur-3xl"
           style={{ background: "radial-gradient(closest-side, var(--color-gold-light), transparent)" }}
         />
-        <div className="relative mx-auto max-w-4xl px-5 sm:px-6">
-          <div className="rounded-[2rem] border border-[var(--color-gold)]/25 bg-[var(--color-cream)] p-8 shadow-soft sm:p-12">
-            <p className="text-center text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">
-              Por trás do Spazio Vitta Bella
-            </p>
-            <h2 className="mt-4 text-center font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl">
-              Tatiana <span className="italic text-gradient-gold">Wagner Hamasaki</span>
-            </h2>
+        <div className="relative mx-auto max-w-6xl px-5 sm:px-6">
+          <div className="rounded-[2rem] border border-[var(--color-gold)]/25 bg-[var(--color-cream)] p-6 shadow-soft sm:p-10 md:p-12">
+            <div className="grid gap-8 md:grid-cols-[minmax(0,320px)_1fr] md:items-center md:gap-12">
+              <figure className="mx-auto w-full max-w-[320px] md:mx-0">
+                <div className="relative overflow-hidden rounded-[1.75rem] border border-[var(--color-gold)]/30 shadow-soft">
+                  <img
+                    src={tatianaAsset.url}
+                    alt="Tatiana Wagner Hamasaki, idealizadora do Spazio Vitta Bella em Santo André"
+                    loading="lazy"
+                    className="block h-full w-full object-cover"
+                  />
+                </div>
+              </figure>
 
-            <div className="mx-auto mt-8 max-w-2xl space-y-5 text-base leading-relaxed text-foreground/75">
-              <p>
-                Há dois anos, Tatiana Wagner Hamasaki transformou um sonho em realidade ao criar o Spazio Vitta Bella:
-                um espaço pensado para acolher, cuidar e valorizar cada cliente.
-              </p>
-              <p>
-                Desde o início, sua proposta foi oferecer muito mais do que serviços de beleza. Tati queria construir um
-                ambiente onde cada pessoa se sentisse ouvida, respeitada e saísse mais feliz do que entrou.
-              </p>
-              <p>
-                Com coragem, dedicação e amor pelo que faz, ela fez o espaço crescer. Hoje, o Spazio Vitta Bella reúne
-                beleza, estética, Pilates e bem-estar em uma experiência acolhedora, cuidadosa e personalizada.
-              </p>
+              <div>
+                <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">
+                  Por trás do Spazio Vitta Bella
+                </p>
+                <h2 className="mt-3 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl">
+                  Tatiana <span className="italic text-gradient-gold">Wagner Hamasaki</span>
+                </h2>
+
+                <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground/75">
+                  <p>
+                    Há dois anos, Tatiana Wagner Hamasaki transformou um sonho em realidade ao criar o Spazio Vitta Bella:
+                    um espaço pensado para acolher, cuidar e valorizar cada cliente.
+                  </p>
+                  <p>
+                    Desde o início, sua proposta foi oferecer muito mais do que serviços de beleza. Tati queria construir um
+                    ambiente onde cada pessoa se sentisse ouvida, respeitada e saísse mais feliz do que entrou.
+                  </p>
+                  <p>
+                    Com coragem, dedicação e amor pelo que faz, ela fez o espaço crescer. Hoje, o Spazio Vitta Bella reúne
+                    beleza, estética, Pilates e bem-estar em uma experiência acolhedora, cuidadosa e personalizada.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <figure className="mx-auto mt-10 max-w-2xl border-t border-[var(--color-gold)]/25 pt-8 text-center">
+            <figure className="mx-auto mt-10 max-w-3xl border-t border-[var(--color-gold)]/25 pt-8 text-center">
               <Quote className="mx-auto h-5 w-5 text-[var(--color-gold)]" />
               <blockquote className="mt-3 font-display text-xl italic text-[var(--color-rose-deep)] sm:text-2xl">
                 "Meu maior objetivo é fazer do Spazio Vitta Bella um lugar onde beleza, autoestima, saúde e bem-estar
