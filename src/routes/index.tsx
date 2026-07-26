@@ -468,16 +468,41 @@ function Index() {
 
                 <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground/75">
                   <p>
-                    Há dois anos, Tatiana Wagner Hamasaki transformou um sonho em realidade ao criar o Spazio Vitta Bella:
-                    um espaço pensado para acolher, cuidar e valorizar cada cliente.
+                    Há dois anos, decidi transformar um sonho em realidade. O Spazio Vitta Bella nasceu do meu desejo de
+                    trabalhar com propósito, autonomia e amor pelo cuidado com as pessoas.
                   </p>
                   <p>
-                    Desde o início, sua proposta foi oferecer muito mais do que serviços de beleza. Tati queria construir um
-                    ambiente onde cada pessoa se sentisse ouvida, respeitada e saísse mais feliz do que entrou.
+                    Foi com coragem, dedicação e muita vontade de oferecer algo além dos serviços de beleza que dei início
+                    a essa trajetória. Eu queria criar um lugar onde cada cliente se sentisse acolhida, valorizada e saísse
+                    mais feliz do que entrou.
                   </p>
                   <p>
-                    Com coragem, dedicação e amor pelo que faz, ela fez o espaço crescer. Hoje, o Spazio Vitta Bella reúne
-                    beleza, estética, Pilates e bem-estar em uma experiência acolhedora, cuidadosa e personalizada.
+                    No começo, os desafios foram muitos. Mas a paixão pelo que faço sempre falou mais alto. A cada cliente
+                    que confiava no meu trabalho, eu encontrava ainda mais força para seguir em frente, aprender, evoluir e
+                    acreditar nesse sonho.
+                  </p>
+                  <p>
+                    Com o tempo, o Spazio Vitta Bella cresceu. Hoje, reunimos profissionais dedicadas e oferecemos serviços
+                    de manicure, cabelo, estética e Pilates, sempre com o compromisso de cuidar da autoestima, da saúde e
+                    do bem-estar de cada pessoa que passa por aqui.
+                  </p>
+                  <p>
+                    Para mim, esse espaço é de todas. Tenho orgulho de ver o Spazio Vitta Bella se tornar um ambiente
+                    acolhedor, onde cada detalhe é pensado com carinho e onde cada cliente é recebida da forma como eu,
+                    Tatiana, gostaria de ser tratada em todos os lugares.
+                  </p>
+                  <p>
+                    Olhando para trás, sinto orgulho de cada passo dado. Cada dificuldade se transformou em aprendizado, e
+                    cada conquista foi construída com muito esforço, amor e a confiança das nossas clientes.
+                  </p>
+                  <p>
+                    Essa história está apenas começando. Meu maior objetivo continua sendo evoluir todos os dias, oferecer
+                    um atendimento de excelência e fazer do Spazio Vitta Bella um lugar onde beleza, saúde, autoestima e
+                    bem-estar caminhem juntos.
+                  </p>
+                  <p>
+                    A todos que fazem parte dessa trajetória, o meu mais sincero obrigada. Vocês são parte da realização
+                    desse sonho.
                   </p>
                 </div>
               </div>
@@ -485,10 +510,6 @@ function Index() {
 
             <figure className="mx-auto mt-10 max-w-3xl border-t border-[var(--color-gold)]/25 pt-8 text-center">
               <Quote className="mx-auto h-5 w-5 text-[var(--color-gold)]" />
-              <blockquote className="mt-3 font-display text-xl italic text-[var(--color-rose-deep)] sm:text-2xl">
-                "Meu maior objetivo é fazer do Spazio Vitta Bella um lugar onde beleza, autoestima, saúde e bem-estar
-                caminhem juntos."
-              </blockquote>
               <figcaption className="mt-5">
                 <p className="font-display text-lg text-[var(--color-rose-deep)]">Tatiana Wagner Hamasaki</p>
                 <p className="mt-1 text-[10px] uppercase tracking-[0.28em] text-[var(--color-gold)]">
