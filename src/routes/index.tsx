@@ -34,8 +34,8 @@ import pilatesStudioImg from "@/assets/pilates-studio.jpg";
 import pilatesSoloImg from "@/assets/pilates-solo.jpg";
 import pilatesForcaImg from "@/assets/pilates-forca.jpg";
 import logoUrl from "@/assets/spazio-vitta-bella-logo.png";
-import tatianaAsset from "@/assets/tatiana-wagner-hamasaki.webp.asset.json";
-import dermaplaningAsset from "@/assets/treatment-dermaplaning.webp.asset.json";
+import tatianaImg from "@/assets/tatiana-wagner-hamasaki.webp";
+import dermaplaningImg from "@/assets/dermaplaning-spazio-vitta-bella.webp";
 
 
 export const Route = createFileRoute("/")({
@@ -122,7 +122,7 @@ const treatments: { name: string; desc: string; img?: string; alt?: string; cta?
   {
     name: "Dermaplaning",
     desc: "Renovação suave da pele por meio da remoção de células mortas e pelos finos da face, ajudando a deixar a pele com aparência mais lisa, macia e iluminada. Ideal para quem busca uma pele mais uniforme e preparada para receber melhor os cuidados de skincare. Os resultados podem variar de acordo com cada pele e avaliação profissional.",
-    img: dermaplaningAsset.url,
+    img: dermaplaningImg,
     alt: "Tratamento de Dermaplaning no Spazio Vitta Bella em Santo André",
     badge: "Novo",
   },
@@ -456,7 +456,7 @@ function Index() {
               <figure className="mx-auto w-full max-w-[320px] md:mx-0">
                 <div className="relative overflow-hidden rounded-[1.75rem] border border-[var(--color-gold)]/30 shadow-soft">
                   <img
-                    src={tatianaAsset.url}
+                    src={tatianaImg}
                     alt="Tatiana Wagner Hamasaki, idealizadora do Spazio Vitta Bella em Santo André"
                     loading="lazy"
                     className="block h-full w-full object-cover"
