@@ -376,7 +376,7 @@ function Index() {
                 className="group relative overflow-hidden rounded-3xl bg-[var(--color-cream)] ring-1 ring-[var(--color-gold)]/15 transition hover:ring-[var(--color-gold)]/60 hover:shadow-soft"
               >
                 {t.img ? (
-                  <div className="aspect-[5/4] overflow-hidden">
+                  <div className="relative aspect-[5/4] overflow-hidden">
                     <img
                       src={t.img}
                       alt={t.alt ?? t.name}
@@ -385,6 +385,11 @@ function Index() {
                       loading="lazy"
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
+                    {t.badge && (
+                      <span className="absolute top-3 left-3 rounded-full bg-[var(--color-cream)]/90 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-[var(--color-rose-deep)] ring-1 ring-[var(--color-gold)]/50 backdrop-blur-sm">
+                        {t.badge}
+                      </span>
+                    )}
                   </div>
                 ) : (
                   <div className="relative aspect-[5/4] overflow-hidden bg-gradient-blush">
