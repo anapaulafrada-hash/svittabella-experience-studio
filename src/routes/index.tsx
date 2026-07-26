@@ -34,6 +34,7 @@ import pilatesStudioImg from "@/assets/pilates-studio.jpg";
 import pilatesSoloImg from "@/assets/pilates-solo.jpg";
 import pilatesForcaImg from "@/assets/pilates-forca.jpg";
 import logoUrl from "@/assets/spazio-vitta-bella-logo.png";
+import tatianaAsset from "@/assets/tatiana-wagner-hamasaki.webp.asset.json";
 
 
 export const Route = createFileRoute("/")({
