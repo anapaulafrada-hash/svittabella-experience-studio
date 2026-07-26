@@ -407,7 +407,90 @@ function Index() {
         </div>
       </section>
 
+      {/* FOUNDER */}
+      <section id="fundadora" className="relative overflow-hidden py-16 sm:py-24 md:py-32">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-24 -right-24 h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
+          style={{ background: "radial-gradient(closest-side, var(--color-rose), transparent)" }}
+        />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -bottom-24 -left-24 h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
+          style={{ background: "radial-gradient(closest-side, var(--color-gold-light), transparent)" }}
+        />
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-6 md:grid-cols-12 md:gap-14">
+          <div className="md:col-span-5">
+            <div className="relative">
+              <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[var(--color-gold-light)]/40 to-[var(--color-rose)]/25 blur-2xl" />
+              <div className="relative overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-[var(--color-gold)]/40">
+                <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-4 bg-gradient-blush text-center">
+                  <img src={logoUrl} alt="Spazio Vitta Bella" className="h-24 w-24 object-contain opacity-90 sm:h-28 sm:w-28" />
+                  <p className="font-display text-2xl italic text-[var(--color-rose-deep)] sm:text-3xl">Tatiana Wagner Hamasaki</p>
+                  <p className="max-w-[16rem] px-6 text-[10px] uppercase tracking-[0.28em] text-[var(--color-gold)]">
+                    Idealizadora do Spazio Vitta Bella
+                  </p>
+                </div>
+              </div>
+              <div className="absolute -bottom-6 left-4 right-4 rounded-2xl bg-background/95 p-4 shadow-soft ring-1 ring-border backdrop-blur sm:-bottom-8 sm:left-auto sm:right-6 sm:max-w-[16rem]">
+                <Quote className="h-5 w-5 text-[var(--color-gold)]" />
+                <p className="mt-2 font-display text-base italic text-[var(--color-rose-deep)]">
+                  "Um sonho construído com coragem, cuidado e amor por cada cliente."
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-7">
+            <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">
+              Quem está à frente do Spazio Vitta Bella
+            </p>
+            <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
+              Tatiana <span className="italic text-gradient-gold">Wagner Hamasaki</span>
+            </h2>
+
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground/75">
+              <p>
+                Há dois anos, Tatiana Wagner Hamasaki decidiu transformar um sonho em realidade: criar um espaço onde
+                pudesse trabalhar com propósito, autonomia e amor pelo cuidado com as pessoas.
+              </p>
+              <p>
+                Assim nasceu o Spazio Vitta Bella, fruto de coragem, dedicação e da vontade de oferecer muito mais do
+                que serviços de beleza. Desde o início, a proposta da Tati foi construir um lugar onde cada cliente se
+                sentisse acolhida, valorizada e saísse mais feliz do que entrou.
+              </p>
+              <p>
+                Os primeiros passos vieram acompanhados de muitos desafios, mas a paixão pelo que faz sempre falou mais
+                alto. A cada cliente que confiava em seu trabalho, Tati encontrava ainda mais força para seguir, evoluir
+                e ampliar esse sonho.
+              </p>
+              <p>
+                Com o tempo, o Spazio Vitta Bella cresceu. Hoje, o espaço reúne profissionais dedicados e oferece
+                serviços de estética, beleza, manicure, cabelo e Pilates, sempre com o compromisso de cuidar da
+                autoestima, da saúde e do bem-estar de cada pessoa que passa por ali.
+              </p>
+              <p>
+                Para Tati, o Spazio Vitta Bella é mais do que um negócio. É um espaço pensado para acolher, cuidar e
+                transformar momentos simples em experiências especiais. Cada detalhe foi construído com o mesmo carinho
+                com que ela gostaria de ser recebida e tratada em todos os lugares.
+              </p>
+              <p>
+                Olhando para trás, Tati se orgulha de cada passo dado. Cada dificuldade virou aprendizado, e cada
+                conquista foi construída com esforço, amor e a confiança das clientes.
+              </p>
+              <p>
+                Essa história está apenas começando. Seu maior objetivo continua sendo evoluir todos os dias, oferecer
+                um atendimento de excelência e fazer do Spazio Vitta Bella um lugar onde beleza, saúde, autoestima e
+                bem-estar caminham juntos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PILATES */}
+
       <section id="pilates" className="relative overflow-hidden bg-[var(--color-cream)] py-16 sm:py-24 md:py-32">
         <div
           aria-hidden
