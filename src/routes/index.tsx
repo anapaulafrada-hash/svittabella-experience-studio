@@ -28,7 +28,7 @@ import microagulhamentoImg from "@/assets/treatment-microagulhamento.jpg";
 import preenchimentoImg from "@/assets/treatment-preenchimento.jpg";
 import henaLabialImg from "@/assets/treatment-hena-labial.jpg";
 import ciliosImg from "@/assets/treatment-cilios.jpg";
-import dermaplaningImg from "@/assets/treatment-dermaplaning.jpg";
+
 import lotusImg from "@/assets/lotus-detail.jpg";
 import pilatesStudioImg from "@/assets/pilates-studio.jpg";
 import pilatesSoloImg from "@/assets/pilates-solo.jpg";
@@ -107,7 +107,7 @@ export const Route = createFileRoute("/")({
 });
 
 
-const treatments = [
+const treatments: { name: string; desc: string; img?: string; cta?: { label: string; href: string } }[] = [
   { name: "Lipoenzimática", desc: "Modelagem corporal que reduz medidas com ativos lipolíticos.", img: lipoenzimaticaImg },
   { name: "Botox", desc: "Suavização de linhas de expressão com aplicação especializada.", img: botoxImg },
   { name: "Drenagem Linfática", desc: "Movimentos precisos que aliviam, desincham e renovam.", img: drenagemImg },
@@ -117,7 +117,14 @@ const treatments = [
   { name: "Preenchimento Facial", desc: "Volume e harmonia com ácido hialurônico de alta performance.", img: preenchimentoImg },
   { name: "Hena Labial", desc: "Lábios definidos, hidratados e com cor por mais tempo.", img: henaLabialImg },
   { name: "Extensão de Cílios", desc: "Olhar marcante, fio a fio, com aplicação delicada.", img: ciliosImg },
-  { name: "Dermaplaning", desc: "Renovação suave que remove células mortas e penugem facial, deixando a pele lisa, macia e iluminada.", img: dermaplaningImg },
+  {
+    name: "Dermaplaning",
+    desc: "Renovação suave da pele por meio da remoção de células mortas e pelos finos da face, ajudando a deixar a pele com aparência mais lisa, macia e iluminada. Ideal para quem busca uma pele mais uniforme e preparada para receber melhor os cuidados de skincare. Os resultados podem variar de acordo com cada pele e avaliação profissional.",
+    cta: {
+      label: "Agendar Dermaplaning",
+      href: "https://wa.me/5511978813648?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20Dermaplaning.",
+    },
+  },
 ];
 
 const pillars = [
@@ -185,7 +192,6 @@ function Index() {
               ["O Espaço", "#espaco"],
               ["Tratamentos", "#tratamentos"],
               ["Pilates", "#pilates"],
-              ["A Fundadora", "#fundadora"],
               ["Experiência", "#experiencia"],
               ["Depoimentos", "#depoimentos"],
               ["Visite", "#visite"],
@@ -213,7 +219,7 @@ function Index() {
                 ["O Espaço", "#espaco"],
                 ["Tratamentos", "#tratamentos"],
                 ["Pilates", "#pilates"],
-                ["A Fundadora", "#fundadora"],
+                
                 ["Experiência", "#experiencia"],
                 ["Depoimentos", "#depoimentos"],
                 ["Visite", "#visite"],
@@ -368,16 +374,29 @@ function Index() {
                 key={t.name}
                 className="group relative overflow-hidden rounded-3xl bg-[var(--color-cream)] ring-1 ring-[var(--color-gold)]/15 transition hover:ring-[var(--color-gold)]/60 hover:shadow-soft"
               >
-                <div className="aspect-[5/4] overflow-hidden">
-                  <img
-                    src={t.img}
-                    alt={t.name}
-                    width={1200}
-                    height={960}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
-                </div>
+                {t.img ? (
+                  <div className="aspect-[5/4] overflow-hidden">
+                    <img
+                      src={t.img}
+                      alt={t.name}
+                      width={1200}
+                      height={960}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                ) : (
+                  <div className="relative aspect-[5/4] overflow-hidden bg-gradient-blush">
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute inset-0 opacity-60"
+                      style={{ background: "radial-gradient(closest-side, var(--color-gold-light), transparent 70%)" }}
+                    />
+                    <div className="relative flex h-full w-full items-center justify-center">
+                      <Flower2 className="h-14 w-14 text-[var(--color-rose-deep)]/70" />
+                    </div>
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] uppercase tracking-[0.24em] text-[var(--color-gold)]">
@@ -387,6 +406,17 @@ function Index() {
                   </div>
                   <h3 className="mt-3 font-display text-2xl text-[var(--color-rose-deep)]">{t.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground/70">{t.desc}</p>
+                  {t.cta && (
+                    <a
+                      href={t.cta.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex items-center gap-2 rounded-full bg-[var(--color-rose-deep)] px-5 py-2.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--color-cream)] shadow-gold transition hover:bg-[var(--color-rose)]"
+                    >
+                      {t.cta.label}
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
@@ -407,84 +437,50 @@ function Index() {
         </div>
       </section>
 
-      {/* FOUNDER */}
-      <section id="fundadora" className="relative overflow-hidden py-16 sm:py-24 md:py-32">
+      {/* FOUNDER — discreet institutional block */}
+      <section className="relative overflow-hidden py-16 sm:py-24">
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-24 -right-24 h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
-          style={{ background: "radial-gradient(closest-side, var(--color-rose), transparent)" }}
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -bottom-24 -left-24 h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
+          className="pointer-events-none absolute -top-24 -right-24 h-[360px] w-[360px] rounded-full opacity-30 blur-3xl"
           style={{ background: "radial-gradient(closest-side, var(--color-gold-light), transparent)" }}
         />
-
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 sm:px-6 md:grid-cols-12 md:gap-14">
-          <div className="md:col-span-5">
-            <div className="relative">
-              <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[var(--color-gold-light)]/40 to-[var(--color-rose)]/25 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-[var(--color-gold)]/40">
-                <div className="flex aspect-[4/5] w-full flex-col items-center justify-center gap-4 bg-gradient-blush text-center">
-                  <img src={logoUrl} alt="Spazio Vitta Bella" className="h-24 w-24 object-contain opacity-90 sm:h-28 sm:w-28" />
-                  <p className="font-display text-2xl italic text-[var(--color-rose-deep)] sm:text-3xl">Tatiana Wagner Hamasaki</p>
-                  <p className="max-w-[16rem] px-6 text-[10px] uppercase tracking-[0.28em] text-[var(--color-gold)]">
-                    Idealizadora do Spazio Vitta Bella
-                  </p>
-                </div>
-              </div>
-              <div className="absolute -bottom-6 left-4 right-4 rounded-2xl bg-background/95 p-4 shadow-soft ring-1 ring-border backdrop-blur sm:-bottom-8 sm:left-auto sm:right-6 sm:max-w-[16rem]">
-                <Quote className="h-5 w-5 text-[var(--color-gold)]" />
-                <p className="mt-2 font-display text-base italic text-[var(--color-rose-deep)]">
-                  "Um sonho construído com coragem, cuidado e amor por cada cliente."
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:col-span-7">
-            <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">
-              Quem está à frente do Spazio Vitta Bella
+        <div className="relative mx-auto max-w-4xl px-5 sm:px-6">
+          <div className="rounded-[2rem] border border-[var(--color-gold)]/25 bg-[var(--color-cream)] p-8 shadow-soft sm:p-12">
+            <p className="text-center text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">
+              Por trás do Spazio Vitta Bella
             </p>
-            <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 text-center font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl">
               Tatiana <span className="italic text-gradient-gold">Wagner Hamasaki</span>
             </h2>
 
-            <div className="mt-6 space-y-4 text-base leading-relaxed text-foreground/75">
+            <div className="mx-auto mt-8 max-w-2xl space-y-5 text-base leading-relaxed text-foreground/75">
               <p>
-                Há dois anos, Tatiana Wagner Hamasaki decidiu transformar um sonho em realidade: criar um espaço onde
-                pudesse trabalhar com propósito, autonomia e amor pelo cuidado com as pessoas.
+                Há dois anos, Tatiana Wagner Hamasaki transformou um sonho em realidade ao criar o Spazio Vitta Bella:
+                um espaço pensado para acolher, cuidar e valorizar cada cliente.
               </p>
               <p>
-                Assim nasceu o Spazio Vitta Bella, fruto de coragem, dedicação e da vontade de oferecer muito mais do
-                que serviços de beleza. Desde o início, a proposta da Tati foi construir um lugar onde cada cliente se
-                sentisse acolhida, valorizada e saísse mais feliz do que entrou.
+                Desde o início, sua proposta foi oferecer muito mais do que serviços de beleza. Tati queria construir um
+                ambiente onde cada pessoa se sentisse ouvida, respeitada e saísse mais feliz do que entrou.
               </p>
               <p>
-                Os primeiros passos vieram acompanhados de muitos desafios, mas a paixão pelo que faz sempre falou mais
-                alto. A cada cliente que confiava em seu trabalho, Tati encontrava ainda mais força para seguir, evoluir
-                e ampliar esse sonho.
-              </p>
-              <p>
-                Com o tempo, o Spazio Vitta Bella cresceu. Hoje, o espaço reúne profissionais dedicados e oferece
-                serviços de estética, beleza, manicure, cabelo e Pilates, sempre com o compromisso de cuidar da
-                autoestima, da saúde e do bem-estar de cada pessoa que passa por ali.
-              </p>
-              <p>
-                Para Tati, o Spazio Vitta Bella é mais do que um negócio. É um espaço pensado para acolher, cuidar e
-                transformar momentos simples em experiências especiais. Cada detalhe foi construído com o mesmo carinho
-                com que ela gostaria de ser recebida e tratada em todos os lugares.
-              </p>
-              <p>
-                Olhando para trás, Tati se orgulha de cada passo dado. Cada dificuldade virou aprendizado, e cada
-                conquista foi construída com esforço, amor e a confiança das clientes.
-              </p>
-              <p>
-                Essa história está apenas começando. Seu maior objetivo continua sendo evoluir todos os dias, oferecer
-                um atendimento de excelência e fazer do Spazio Vitta Bella um lugar onde beleza, saúde, autoestima e
-                bem-estar caminham juntos.
+                Com coragem, dedicação e amor pelo que faz, ela fez o espaço crescer. Hoje, o Spazio Vitta Bella reúne
+                beleza, estética, Pilates e bem-estar em uma experiência acolhedora, cuidadosa e personalizada.
               </p>
             </div>
+
+            <figure className="mx-auto mt-10 max-w-2xl border-t border-[var(--color-gold)]/25 pt-8 text-center">
+              <Quote className="mx-auto h-5 w-5 text-[var(--color-gold)]" />
+              <blockquote className="mt-3 font-display text-xl italic text-[var(--color-rose-deep)] sm:text-2xl">
+                "Meu maior objetivo é fazer do Spazio Vitta Bella um lugar onde beleza, autoestima, saúde e bem-estar
+                caminhem juntos."
+              </blockquote>
+              <figcaption className="mt-5">
+                <p className="font-display text-lg text-[var(--color-rose-deep)]">Tatiana Wagner Hamasaki</p>
+                <p className="mt-1 text-[10px] uppercase tracking-[0.28em] text-[var(--color-gold)]">
+                  Idealizadora do Spazio Vitta Bella
+                </p>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
