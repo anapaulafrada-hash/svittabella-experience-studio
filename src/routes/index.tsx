@@ -107,7 +107,7 @@ export const Route = createFileRoute("/")({
 });
 
 
-const treatments = [
+const treatments: { name: string; desc: string; img?: string; cta?: { label: string; href: string } }[] = [
   { name: "Lipoenzimática", desc: "Modelagem corporal que reduz medidas com ativos lipolíticos.", img: lipoenzimaticaImg },
   { name: "Botox", desc: "Suavização de linhas de expressão com aplicação especializada.", img: botoxImg },
   { name: "Drenagem Linfática", desc: "Movimentos precisos que aliviam, desincham e renovam.", img: drenagemImg },
@@ -117,7 +117,14 @@ const treatments = [
   { name: "Preenchimento Facial", desc: "Volume e harmonia com ácido hialurônico de alta performance.", img: preenchimentoImg },
   { name: "Hena Labial", desc: "Lábios definidos, hidratados e com cor por mais tempo.", img: henaLabialImg },
   { name: "Extensão de Cílios", desc: "Olhar marcante, fio a fio, com aplicação delicada.", img: ciliosImg },
-  { name: "Dermaplaning", desc: "Renovação suave que remove células mortas e penugem facial, deixando a pele lisa, macia e iluminada.", img: dermaplaningImg },
+  {
+    name: "Dermaplaning",
+    desc: "Renovação suave da pele por meio da remoção de células mortas e pelos finos da face, ajudando a deixar a pele com aparência mais lisa, macia e iluminada. Ideal para quem busca uma pele mais uniforme e preparada para receber melhor os cuidados de skincare. Os resultados podem variar de acordo com cada pele e avaliação profissional.",
+    cta: {
+      label: "Agendar Dermaplaning",
+      href: "https://wa.me/5511978813648?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20Dermaplaning.",
+    },
+  },
 ];
 
 const pillars = [
