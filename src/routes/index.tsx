@@ -35,7 +35,7 @@ import pilatesSoloImg from "@/assets/pilates-solo.jpg";
 import pilatesForcaImg from "@/assets/pilates-forca.jpg";
 import logoUrl from "@/assets/spazio-vitta-bella-logo.png";
 import tatianaAsset from "@/assets/tatiana-wagner-hamasaki.webp.asset.json";
-import dermaplaningAsset from "@/assets/treatment-dermaplaning.png.asset.json";
+import dermaplaningAsset from "@/assets/treatment-dermaplaning.webp.asset.json";
 
 
 export const Route = createFileRoute("/")({
