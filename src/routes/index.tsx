@@ -35,6 +35,7 @@ import pilatesSoloImg from "@/assets/pilates-solo.jpg";
 import pilatesForcaImg from "@/assets/pilates-forca.jpg";
 import logoUrl from "@/assets/spazio-vitta-bella-logo.png";
 import tatianaAsset from "@/assets/tatiana-wagner-hamasaki.webp.asset.json";
+import dermaplaningAsset from "@/assets/treatment-dermaplaning.png.asset.json";
 
 
 export const Route = createFileRoute("/")({
@@ -108,7 +109,7 @@ export const Route = createFileRoute("/")({
 });
 
 
-const treatments: { name: string; desc: string; img?: string; cta?: { label: string; href: string } }[] = [
+const treatments: { name: string; desc: string; img?: string; alt?: string; cta?: { label: string; href: string } }[] = [
   { name: "Lipoenzimática", desc: "Modelagem corporal que reduz medidas com ativos lipolíticos.", img: lipoenzimaticaImg },
   { name: "Botox", desc: "Suavização de linhas de expressão com aplicação especializada.", img: botoxImg },
   { name: "Drenagem Linfática", desc: "Movimentos precisos que aliviam, desincham e renovam.", img: drenagemImg },
@@ -121,9 +122,11 @@ const treatments: { name: string; desc: string; img?: string; cta?: { label: str
   {
     name: "Dermaplaning",
     desc: "Renovação suave da pele por meio da remoção de células mortas e pelos finos da face, ajudando a deixar a pele com aparência mais lisa, macia e iluminada. Ideal para quem busca uma pele mais uniforme e preparada para receber melhor os cuidados de skincare. Os resultados podem variar de acordo com cada pele e avaliação profissional.",
+    img: dermaplaningAsset.url,
+    alt: "Tratamento de Dermaplaning no Spazio Vitta Bella em Santo André",
     cta: {
-      label: "Agendar Dermaplaning",
-      href: "https://wa.me/5511978813648?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20quero%20agendar%20Dermaplaning.",
+      label: "Agendar pelo WhatsApp",
+      href: "https://wa.me/5511978813648?text=Ol%C3%A1,%20vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio.",
     },
   },
 ];
@@ -379,7 +382,7 @@ function Index() {
                   <div className="aspect-[5/4] overflow-hidden">
                     <img
                       src={t.img}
-                      alt={t.name}
+                      alt={t.alt ?? t.name}
                       width={1200}
                       height={960}
                       loading="lazy"
@@ -810,6 +813,13 @@ function Index() {
           >
             <Instagram className="h-4 w-4" /> @svittabella
           </a>
+        </div>
+        <div className="mx-auto mt-8 max-w-7xl border-t border-[var(--color-gold)]/15 px-5 pt-5 text-center sm:px-6">
+          <p className="text-[11px] tracking-[0.14em] text-foreground/50">
+            Desenvolvido por <span className="text-[var(--color-rose-deep)]/80">Ana Frada</span>
+            <span className="mx-2 text-[var(--color-gold)]/50">·</span>
+            <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/40">Estratégia, Conteúdo e Presença Digital</span>
+          </p>
         </div>
       </footer>
 
