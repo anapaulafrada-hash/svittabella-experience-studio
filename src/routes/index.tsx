@@ -28,6 +28,7 @@ import microagulhamentoImg from "@/assets/treatment-microagulhamento.jpg";
 import preenchimentoImg from "@/assets/treatment-preenchimento.jpg";
 import henaLabialImg from "@/assets/treatment-hena-labial.jpg";
 import ciliosImg from "@/assets/treatment-cilios.jpg";
+import dermaplaningImg from "@/assets/treatment-dermaplaning.jpg";
 import lotusImg from "@/assets/lotus-detail.jpg";
 import pilatesStudioImg from "@/assets/pilates-studio.jpg";
 import pilatesSoloImg from "@/assets/pilates-solo.jpg";
@@ -91,6 +92,7 @@ export const Route = createFileRoute("/")({
               "Preenchimento Facial",
               "Hena Labial",
               "Extensão de Cílios",
+              "Dermaplaning",
               "Pilates",
             ].map((n) => ({
               "@type": "Offer",
@@ -115,6 +117,7 @@ const treatments = [
   { name: "Preenchimento Facial", desc: "Volume e harmonia com ácido hialurônico de alta performance.", img: preenchimentoImg },
   { name: "Hena Labial", desc: "Lábios definidos, hidratados e com cor por mais tempo.", img: henaLabialImg },
   { name: "Extensão de Cílios", desc: "Olhar marcante, fio a fio, com aplicação delicada.", img: ciliosImg },
+  { name: "Dermaplaning", desc: "Renovação suave que remove células mortas e penugem facial, deixando a pele lisa, macia e iluminada.", img: dermaplaningImg },
 ];
 
 const pillars = [
