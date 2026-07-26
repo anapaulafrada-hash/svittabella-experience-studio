@@ -375,16 +375,29 @@ function Index() {
                 key={t.name}
                 className="group relative overflow-hidden rounded-3xl bg-[var(--color-cream)] ring-1 ring-[var(--color-gold)]/15 transition hover:ring-[var(--color-gold)]/60 hover:shadow-soft"
               >
-                <div className="aspect-[5/4] overflow-hidden">
-                  <img
-                    src={t.img}
-                    alt={t.name}
-                    width={1200}
-                    height={960}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
-                </div>
+                {t.img ? (
+                  <div className="aspect-[5/4] overflow-hidden">
+                    <img
+                      src={t.img}
+                      alt={t.name}
+                      width={1200}
+                      height={960}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                ) : (
+                  <div className="relative aspect-[5/4] overflow-hidden bg-gradient-blush">
+                    <div
+                      aria-hidden
+                      className="pointer-events-none absolute inset-0 opacity-60"
+                      style={{ background: "radial-gradient(closest-side, var(--color-gold-light), transparent 70%)" }}
+                    />
+                    <div className="relative flex h-full w-full items-center justify-center">
+                      <Flower2 className="h-14 w-14 text-[var(--color-rose-deep)]/70" />
+                    </div>
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="flex items-center justify-between">
                     <span className="text-[10px] uppercase tracking-[0.24em] text-[var(--color-gold)]">
@@ -394,6 +407,17 @@ function Index() {
                   </div>
                   <h3 className="mt-3 font-display text-2xl text-[var(--color-rose-deep)]">{t.name}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-foreground/70">{t.desc}</p>
+                  {t.cta && (
+                    <a
+                      href={t.cta.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-5 inline-flex items-center gap-2 rounded-full bg-[var(--color-rose-deep)] px-5 py-2.5 text-[10px] font-medium uppercase tracking-[0.2em] text-[var(--color-cream)] shadow-gold transition hover:bg-[var(--color-rose)]"
+                    >
+                      {t.cta.label}
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
