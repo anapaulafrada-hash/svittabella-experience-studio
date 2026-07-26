@@ -192,7 +192,6 @@ function Index() {
               ["O Espaço", "#espaco"],
               ["Tratamentos", "#tratamentos"],
               ["Pilates", "#pilates"],
-              ["A Fundadora", "#fundadora"],
               ["Experiência", "#experiencia"],
               ["Depoimentos", "#depoimentos"],
               ["Visite", "#visite"],
