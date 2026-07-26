@@ -109,7 +109,7 @@ export const Route = createFileRoute("/")({
 });
 
 
-const treatments: { name: string; desc: string; img?: string; alt?: string; cta?: { label: string; href: string } }[] = [
+const treatments: { name: string; desc: string; img?: string; alt?: string; cta?: { label: string; href: string }; badge?: string }[] = [
   { name: "Lipoenzimática", desc: "Modelagem corporal que reduz medidas com ativos lipolíticos.", img: lipoenzimaticaImg },
   { name: "Botox", desc: "Suavização de linhas de expressão com aplicação especializada.", img: botoxImg },
   { name: "Drenagem Linfática", desc: "Movimentos precisos que aliviam, desincham e renovam.", img: drenagemImg },
@@ -124,6 +124,7 @@ const treatments: { name: string; desc: string; img?: string; alt?: string; cta?
     desc: "Renovação suave da pele por meio da remoção de células mortas e pelos finos da face, ajudando a deixar a pele com aparência mais lisa, macia e iluminada. Ideal para quem busca uma pele mais uniforme e preparada para receber melhor os cuidados de skincare. Os resultados podem variar de acordo com cada pele e avaliação profissional.",
     img: dermaplaningAsset.url,
     alt: "Tratamento de Dermaplaning no Spazio Vitta Bella em Santo André",
+    badge: "Novo",
   },
 ];
 
@@ -375,7 +376,7 @@ function Index() {
                 className="group relative overflow-hidden rounded-3xl bg-[var(--color-cream)] ring-1 ring-[var(--color-gold)]/15 transition hover:ring-[var(--color-gold)]/60 hover:shadow-soft"
               >
                 {t.img ? (
-                  <div className="aspect-[5/4] overflow-hidden">
+                  <div className="relative aspect-[5/4] overflow-hidden">
                     <img
                       src={t.img}
                       alt={t.alt ?? t.name}
@@ -384,6 +385,11 @@ function Index() {
                       loading="lazy"
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
                     />
+                    {t.badge && (
+                      <span className="absolute top-3 left-3 rounded-full bg-[var(--color-cream)]/90 px-3 py-1 text-[10px] uppercase tracking-[0.24em] text-[var(--color-rose-deep)] ring-1 ring-[var(--color-gold)]/50 backdrop-blur-sm">
+                        {t.badge}
+                      </span>
+                    )}
                   </div>
                 ) : (
                   <div className="relative aspect-[5/4] overflow-hidden bg-gradient-blush">
