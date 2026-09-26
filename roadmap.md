@@ -1,2 +1,4 @@
 - [x] Ativar Google Analytics no site publicado
 - [x] Registrar cliques nos links do WhatsApp como conversão
+- [ ] Ocultar o selo “Edit with Lovable” no site publicado
+- [ ] Corrigir o acesso ao Instagram nos links do site
