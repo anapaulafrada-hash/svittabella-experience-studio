@@ -36,6 +36,14 @@ import pilatesForcaImg from "@/assets/pilates-forca.jpg";
 import logoUrl from "@/assets/spazio-vitta-bella-logo.png";
 import tatianaImg from "@/assets/tatiana-wagner-hamasaki.webp";
 import dermaplaningImg from "@/assets/dermaplaning-spazio-vitta-bella.webp";
+import { getAnalyticsMeasurementId } from "@/lib/analytics.functions";
+
+declare global {
+  interface Window {
+    dataLayer: unknown[][];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 
 
 export const Route = createFileRoute("/")({
@@ -170,6 +178,52 @@ function Index() {
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    let active = true;
+
+    const initializeAnalytics = async () => {
+      const measurementId = await getAnalyticsMeasurementId();
+      if (!active || !measurementId || document.querySelector(`script[data-ga4="${measurementId}"]`)) {
+        return;
+      }
+
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+      script.dataset.ga4 = measurementId;
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = (...args: unknown[]) => window.dataLayer.push(args);
+      window.gtag("js", new Date());
+      window.gtag("config", measurementId, { page_path: window.location.pathname });
+    };
+
+    void initializeAnalytics();
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    const trackWhatsAppClick = (event: MouseEvent) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+
+      const link = target.closest<HTMLAnchorElement>('a[href*="wa.me"]');
+      if (!link) return;
+
+      window.gtag?.("event", "whatsapp_click", {
+        link_url: link.href,
+        link_text: link.textContent?.trim() || "WhatsApp",
+        transport_type: "beacon",
+      });
+    };
+
+    document.addEventListener("click", trackWhatsAppClick);
+    return () => document.removeEventListener("click", trackWhatsAppClick);
   }, []);
 
   return (
