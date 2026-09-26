@@ -1,0 +1,2 @@
+- [x] Ativar Google Analytics no site publicado
+- [x] Registrar cliques nos links do WhatsApp como conversão
