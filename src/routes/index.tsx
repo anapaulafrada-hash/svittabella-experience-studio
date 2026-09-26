@@ -893,7 +893,7 @@ function Index() {
         </div>
         <div className="mx-auto mt-8 max-w-7xl border-t border-[var(--color-gold)]/15 px-5 pt-5 text-center sm:px-6">
           <p className="text-[11px] tracking-[0.14em] text-foreground/50">
-            Desenvolvido por <span className="text-[var(--color-rose-deep)]/80">@amunizfrada</span>
+            Desenvolvido por <a href="https://www.instagram.com/amunizfrada/" target="_blank" rel="noopener noreferrer" className="text-[var(--color-rose-deep)]/80 hover:underline">@amunizfrada</a>
             <span className="mx-2 text-[var(--color-gold)]/50">·</span>
             <span className="text-[10px] uppercase tracking-[0.22em] text-foreground/40">Estratégia, Conteúdo e Presença Digital</span>
           </p>
