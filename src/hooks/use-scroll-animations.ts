@@ -121,8 +121,7 @@ export function useScrollAnimations(setMenuOpen: (open: boolean) => void) {
           const header = document.querySelector("header");
           const top = destination.getBoundingClientRect().top + scrollY - (header?.getBoundingClientRect().height ?? 0);
           window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
-          // Preserve the destination without triggering router hash-scroll restoration.
-          if (window.location.hash !== hash) history.replaceState(history.state, "", hash);
+          // Do not update router history here: hash restoration would override smooth scrolling.
         });
       };
 
