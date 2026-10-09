@@ -37,6 +37,7 @@ import logoUrl from "@/assets/spazio-vitta-bella-logo.png";
 import tatianaImg from "@/assets/tatiana-wagner-hamasaki.webp";
 import dermaplaningImg from "@/assets/dermaplaning-spazio-vitta-bella.webp";
 import { getAnalyticsMeasurementId } from "@/lib/analytics.functions";
+import { useScrollAnimations } from "@/hooks/use-scroll-animations";
 
 declare global {
   interface Window {
@@ -62,6 +63,8 @@ export const Route = createFileRoute("/")({
           "Referência em transformação e cuidados personalizados em Santo André. Especialistas em Beleza Integrada e Estética Avançada. Agende sua experiência.",
       },
       { property: "og:url", content: "https://www.spaziovittabella.com.br/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/cI8nZ8XcOEQvDJzouLl6SDOhBHo2/social-images/social-1784736141200-spazio_vitta_bella_social_preview_1200x630.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/cI8nZ8XcOEQvDJzouLl6SDOhBHo2/social-images/social-1784736141200-spazio_vitta_bella_social_preview_1200x630.webp" },
       { name: "robots", content: "index, follow" },
@@ -172,6 +175,7 @@ const testimonials = [
 function Index() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  useScrollAnimations(setOpen);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -334,12 +338,12 @@ function Index() {
             </div>
             <div className="mt-10 flex flex-wrap items-center gap-5 sm:gap-8">
               <div>
-                <p className="font-display text-2xl text-[var(--color-rose-deep)] sm:text-3xl">+8</p>
+                <p className="font-display text-2xl text-[var(--color-rose-deep)] sm:text-3xl" data-count="8">+8</p>
                 <p className="text-[10px] uppercase tracking-[0.18em] text-foreground/60 sm:text-xs sm:tracking-[0.2em]">Especialidades</p>
               </div>
               <div className="h-10 w-px bg-border" />
               <div>
-                <p className="font-display text-2xl text-[var(--color-rose-deep)] sm:text-3xl">+460</p>
+                <p className="font-display text-2xl text-[var(--color-rose-deep)] sm:text-3xl" data-count="460">+460</p>
                 <p className="text-[10px] uppercase tracking-[0.18em] text-foreground/60 sm:text-xs sm:tracking-[0.2em]">Clientes ativas</p>
               </div>
               <div className="h-10 w-px bg-border" />
@@ -355,7 +359,7 @@ function Index() {
             <div className="relative">
               <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[var(--color-gold-light)]/40 to-[var(--color-rose)]/20 blur-2xl" />
               <div className="relative overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-[var(--color-gold)]/40">
-                <img src={heroImg} alt="Sala de tratamento Spazio Vitta Bella" width={1600} height={1200} className="aspect-[4/5] w-full object-cover" />
+                <img data-parallax src={heroImg} alt="Sala de tratamento Spazio Vitta Bella" width={1600} height={1200} className="aspect-[4/5] w-full object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 hidden w-56 rounded-2xl bg-background/95 p-4 shadow-soft ring-1 ring-border backdrop-blur md:block">
                 <div className="flex items-center gap-3">
@@ -378,7 +382,7 @@ function Index() {
 
       {/* PILLARS */}
       <section id="espaco" className="bg-[var(--color-cream)] py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-6">
+        <div data-reveal-section className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">O Espaço</p>
             <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
@@ -394,6 +398,7 @@ function Index() {
             {pillars.map(({ icon: Icon, title, text }) => (
               <div
                 key={title}
+                data-reveal-card
                 className="group relative overflow-hidden rounded-3xl border border-[var(--color-gold)]/20 bg-background p-8 transition hover:shadow-soft"
               >
                 <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-[var(--color-rose)]/8 transition group-hover:scale-125" />
@@ -410,7 +415,7 @@ function Index() {
 
       {/* TREATMENTS */}
       <section id="tratamentos" className="relative py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-6">
+        <div data-reveal-section className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div className="max-w-xl">
               <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">Tratamentos</p>
@@ -427,6 +432,7 @@ function Index() {
             {treatments.map((t, i) => (
               <article
                 key={t.name}
+                data-reveal-card
                 className="group relative overflow-hidden rounded-3xl bg-[var(--color-cream)] ring-1 ring-[var(--color-gold)]/15 transition hover:ring-[var(--color-gold)]/60 hover:shadow-soft"
               >
                 {t.img ? (
@@ -595,7 +601,7 @@ function Index() {
           style={{ background: "radial-gradient(closest-side, var(--color-gold-light), transparent)" }}
         />
 
-        <div className="relative mx-auto max-w-7xl px-5 sm:px-6">
+        <div data-reveal-section className="relative mx-auto max-w-7xl px-5 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="inline-flex items-center gap-2 text-[10px] uppercase tracking-[0.32em] text-[var(--color-leaf)]">
               <Leaf className="h-3.5 w-3.5" /> Spazio Pilates · Santo André
@@ -614,6 +620,7 @@ function Index() {
               <div className="grid grid-cols-5 gap-3 sm:gap-4">
                 <div className="col-span-3 overflow-hidden rounded-[1.5rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
                   <img
+                    data-parallax
                     src={pilatesStudioImg}
                     alt="Estúdio de Pilates Spazio Vitta Bella"
                     loading="lazy"
@@ -623,7 +630,8 @@ function Index() {
                 <div className="col-span-2 flex flex-col gap-3 sm:gap-4">
                   <div className="overflow-hidden rounded-[1.25rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
                     <img
-                      src={pilatesForcaImg}
+                      data-parallax
+                    src={pilatesForcaImg}
                       alt="Aula de Pilates — força e alongamento"
                       loading="lazy"
                       className="aspect-square w-full object-cover"
@@ -631,7 +639,8 @@ function Index() {
                   </div>
                   <div className="overflow-hidden rounded-[1.25rem] shadow-soft ring-1 ring-[var(--color-gold)]/30">
                     <img
-                      src={pilatesSoloImg}
+                      data-parallax
+                    src={pilatesSoloImg}
                       alt="Pilates solo e core"
                       loading="lazy"
                       className="aspect-square w-full object-cover"
@@ -664,6 +673,7 @@ function Index() {
                 ].map(({ icon: Icon, title, text }) => (
                   <li
                     key={title}
+                    data-reveal-card
                     className="rounded-2xl border border-[var(--color-gold)]/20 bg-background p-5 transition hover:border-[var(--color-leaf)]/50 hover:shadow-soft"
                   >
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--color-leaf)]/12 text-[var(--color-leaf)]">
@@ -718,10 +728,10 @@ function Index() {
               "radial-gradient(at 20% 20%, var(--color-gold) 0, transparent 40%), radial-gradient(at 80% 80%, var(--color-rose) 0, transparent 45%)",
           }}
         />
-        <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-6 md:grid-cols-2">
+        <div data-reveal-section className="relative mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-6 md:grid-cols-2">
           <div className="relative">
             <div className="overflow-hidden rounded-[2rem] ring-1 ring-[var(--color-gold)]/40 shadow-soft">
-              <img src={lotusImg} alt="Detalhe lótus" width={1200} height={1200} loading="lazy" className="aspect-square w-full object-cover" />
+              <img data-parallax src={lotusImg} alt="Detalhe lótus" width={1200} height={1200} loading="lazy" className="aspect-square w-full object-cover" />
             </div>
             <div className="absolute -bottom-6 left-4 right-4 max-w-[16rem] rounded-2xl bg-[var(--color-cream)] p-4 text-[var(--color-rose-deep)] shadow-soft sm:-bottom-8 sm:left-auto sm:right-4 sm:p-5 md:-right-8">
               <Quote className="h-5 w-5 text-[var(--color-gold)]" />
@@ -748,7 +758,7 @@ function Index() {
                 ["Ritual de Cuidado", "Mãos especialistas conduzem a sessão num ambiente pensado em cada detalhe."],
                 ["Pós & Continuidade", "Acompanhamento e orientações para que sua transformação continue em casa."],
               ].map(([t, d], i) => (
-                <li key={t} className="flex gap-5">
+                <li key={t} data-reveal-card className="flex gap-5">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[var(--color-gold)]/50 font-display text-sm text-[var(--color-gold-light)]">
                     0{i + 1}
                   </div>
@@ -765,7 +775,7 @@ function Index() {
 
       {/* TESTIMONIALS */}
       <section id="depoimentos" className="bg-gradient-blush py-16 sm:py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5 sm:px-6">
+        <div data-reveal-section className="mx-auto max-w-7xl px-5 sm:px-6">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">Depoimentos</p>
             <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
@@ -775,7 +785,7 @@ function Index() {
 
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {testimonials.map((t) => (
-              <figure key={t.name} className="rounded-3xl bg-background p-8 shadow-soft ring-1 ring-[var(--color-gold)]/20">
+              <figure key={t.name} data-reveal-card className="rounded-3xl bg-background p-8 shadow-soft ring-1 ring-[var(--color-gold)]/20">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="h-4 w-4 fill-[var(--color-gold)] text-[var(--color-gold)]" />
@@ -794,7 +804,7 @@ function Index() {
 
       {/* VISIT / CTA */}
       <section id="visite" className="py-16 sm:py-24 md:py-32">
-        <div className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 md:grid-cols-2">
+        <div data-reveal-section className="mx-auto grid max-w-7xl gap-12 px-5 sm:px-6 md:grid-cols-2">
           <div id="agendar">
             <p className="text-[10px] uppercase tracking-[0.32em] text-[var(--color-gold)]">Agende sua visita</p>
             <h2 className="mt-4 font-display text-3xl text-[var(--color-rose-deep)] sm:text-4xl md:text-5xl">
@@ -858,7 +868,7 @@ function Index() {
           <div className="relative">
             <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-[var(--color-rose)]/15 to-[var(--color-gold-light)]/30 blur-2xl" />
             <div className="relative overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-[var(--color-gold)]/40">
-              <img src={limpezaPeleImg} alt="Cuidado facial" width={1200} height={1400} loading="lazy" className="aspect-[4/5] w-full object-cover" />
+              <img data-parallax src={limpezaPeleImg} alt="Cuidado facial" width={1200} height={1400} loading="lazy" className="aspect-[4/5] w-full object-cover" />
             </div>
             <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-background/90 p-5 backdrop-blur ring-1 ring-border">
               <p className="font-display text-base italic text-[var(--color-rose-deep)]">
