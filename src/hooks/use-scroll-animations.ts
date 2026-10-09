@@ -55,18 +55,19 @@ export function useScrollAnimations() {
         frame(tick);
       };
 
-      // Object-position moves only the existing crop, never the frame or image dimensions.
+      // Move the existing image frame as a unit: no scaling, recropping or empty edges.
       const updateParallax = () => {
         scrollFrame = undefined;
         for (const image of images) {
           if (!image.complete || !image.naturalWidth || !image.naturalHeight) continue;
           const rect = image.getBoundingClientRect();
           if (!rect.width || !rect.height || rect.bottom < 0 || rect.top > innerHeight) continue;
-          const scale = Math.max(rect.width / image.naturalWidth, rect.height / image.naturalHeight);
-          const crop = Math.max(0, image.naturalHeight * scale - rect.height);
-          const progress = (innerHeight / 2 - (rect.top + rect.height / 2)) / ((innerHeight + rect.height) / 2);
-          const offset = parallaxAt(progress, crop);
-          image.style.objectPosition = `50% calc(50% + ${offset}px)`;
+          const container = image.parentElement;
+          if (!container) continue;
+          const previous = Number(image.dataset.parallaxOffset ?? 0);
+          const progress = (innerHeight / 2 - (rect.top + rect.height / 2 - previous)) / ((innerHeight + rect.height) / 2);
+          const offset = parallaxAt(progress, SCROLL_ANIMATION.maxParallax * 2);
+          container.style.translate = `0 ${offset}px`;
           image.dataset.parallaxOffset = String(offset);
         }
       };
@@ -74,8 +75,10 @@ export function useScrollAnimations() {
         if (scrollFrame === undefined) scrollFrame = requestAnimationFrame(updateParallax);
       };
       for (const image of images) {
-        const original = image.style.objectPosition;
-        restores.add(() => { image.style.objectPosition = original; delete image.dataset.parallaxOffset; });
+        const container = image.parentElement;
+        if (!container) continue;
+        const original = container.style.translate;
+        restores.add(() => { container.style.translate = original; delete image.dataset.parallaxOffset; });
       }
 
       const observer = new IntersectionObserver((entries) => {
@@ -130,7 +133,7 @@ export function useScrollAnimations() {
         window.removeEventListener("scroll", onScroll);
         window.removeEventListener("resize", onScroll);
         window.removeEventListener("load", onScroll);
-        document.removeEventListener("click", onMenuClick);
+        document.removeEventListener("click", onMenuClick, true);
       };
 
       try {
@@ -138,7 +141,7 @@ export function useScrollAnimations() {
         window.addEventListener("scroll", onScroll, { passive: true });
         window.addEventListener("resize", onScroll, { passive: true });
         window.addEventListener("load", onScroll);
-        document.addEventListener("click", onMenuClick);
+        document.addEventListener("click", onMenuClick, true);
         onScroll();
       } catch { dispose(); }
     };
