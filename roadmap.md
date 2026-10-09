@@ -2,3 +2,5 @@
 - [x] Registrar cliques nos links do WhatsApp como conversão
 - [x] Ocultar o selo “Edit with Lovable” no site publicado
 - [x] Tornar clicável o Instagram @amunizfrada na assinatura
+- [ ] Adicionar entradas, sequência de cards, contagens, parallax e rolagem suave sem alterar o site
+- [ ] Conferir animações, conteúdo preservado e funcionamento sem JavaScript
