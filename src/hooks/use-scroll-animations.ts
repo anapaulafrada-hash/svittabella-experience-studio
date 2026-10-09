@@ -119,7 +119,8 @@ export function useScrollAnimations() {
           const header = document.querySelector("header");
           const top = destination.getBoundingClientRect().top + scrollY - (header?.getBoundingClientRect().height ?? 0);
           window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
-          if (window.location.hash !== hash) history.pushState(null, "", hash);
+          // Preserve the destination without triggering router hash-scroll restoration.
+          if (window.location.hash !== hash) history.replaceState(history.state, "", hash);
         });
       };
 
