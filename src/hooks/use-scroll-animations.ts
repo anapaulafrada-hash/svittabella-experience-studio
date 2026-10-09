@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { claimOnce, countAt, parallaxAt, SCROLL_ANIMATION } from "@/lib/scroll-animation-rules";
 
 /** Progressive enhancement: no hidden CSS state or dependency on JS to show content. */
-export function useScrollAnimations() {
+export function useScrollAnimations(setMenuOpen: (open: boolean) => void) {
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     let dispose = () => {};
@@ -115,6 +115,8 @@ export function useScrollAnimations() {
         const destination = hash ? document.getElementById(hash.slice(1)) : null;
         if (!destination || !hash) return;
         event.preventDefault();
+        event.stopPropagation();
+        setMenuOpen(false);
         frame(() => {
           const header = document.querySelector("header");
           const top = destination.getBoundingClientRect().top + scrollY - (header?.getBoundingClientRect().height ?? 0);
@@ -150,5 +152,5 @@ export function useScrollAnimations() {
     start();
     preference.addEventListener("change", start);
     return () => { dispose(); preference.removeEventListener("change", start); };
-  }, []);
+  }, [setMenuOpen]);
 }
