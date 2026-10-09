@@ -20,7 +20,7 @@ describe("Requested scroll animation rules", () => {
     expect(parallaxAt(10, 500)).toBe(40);
     expect(parallaxAt(-10, 500)).toBe(-40);
   });
-  test("parallax never exposes an empty image border", () => {
+  test("parallax respects a smaller available movement range", () => {
     expect(parallaxAt(1, 20)).toBe(10);
     expect(parallaxAt(-1, 20)).toBe(-10);
     expect(parallaxAt(1, 0)).toBe(0);

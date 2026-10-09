@@ -63,6 +63,8 @@ export const Route = createFileRoute("/")({
           "Referência em transformação e cuidados personalizados em Santo André. Especialistas em Beleza Integrada e Estética Avançada. Agende sua experiência.",
       },
       { property: "og:url", content: "https://www.spaziovittabella.com.br/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/cI8nZ8XcOEQvDJzouLl6SDOhBHo2/social-images/social-1784736141200-spazio_vitta_bella_social_preview_1200x630.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/cI8nZ8XcOEQvDJzouLl6SDOhBHo2/social-images/social-1784736141200-spazio_vitta_bella_social_preview_1200x630.webp" },
       { name: "robots", content: "index, follow" },
