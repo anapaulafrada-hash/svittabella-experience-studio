@@ -12,3 +12,4 @@
 ## Project architecture
 
 - Load the GA4 measurement ID through a public server function, then initialize gtag in the browser, because the configured value is stored as a runtime secret.
+- Keep scroll effects in a browser-only progressive-enhancement hook using native observers and animations; server-rendered content stays visible and image motion uses only existing object-fit crop to preserve layout.
