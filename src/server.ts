@@ -39,6 +39,13 @@ async function normalizeCatastrophicSsrResponse(response: Response): Promise<Res
 
 export default {
   async fetch(request: Request, env: unknown, ctx: unknown) {
+    // Redireciona o domínio sem www para o com www (SEO)
+    const url = new URL(request.url);
+    const host = (request.headers.get("x-forwarded-host") ?? request.headers.get("host") ?? url.host).split(",")[0].trim().toLowerCase();
+    if (host === "spaziovittabella.com.br") {
+      return Response.redirect(`https://www.spaziovittabella.com.br${url.pathname}${url.search}`, 301);
+    }
+
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
