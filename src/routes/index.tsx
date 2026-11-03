@@ -261,7 +261,8 @@ function Index() {
             ))}
           </nav>
           <a
-            href="#agendar"
+            href="https://app.spaziovittabella.com.br"
+
             className="hidden items-center gap-2 rounded-full bg-[var(--color-rose-deep)] px-5 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-[var(--color-cream)] shadow-gold transition hover:bg-[var(--color-rose)] md:inline-flex"
           >
             Agendar
@@ -282,7 +283,7 @@ function Index() {
                 ["Experiência", "#experiencia"],
                 ["Depoimentos", "#depoimentos"],
                 ["Visite", "#visite"],
-                ["Agendar", "#agendar"],
+                ["Agendar", "https://app.spaziovittabella.com.br"],
               ].map(([label, href]) => (
                 <a key={href} href={href} onClick={() => setOpen(false)} className="py-3 text-sm text-foreground/80">
                   {label}
@@ -323,7 +324,8 @@ function Index() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-4">
               <a
-                href="#agendar"
+                href="https://app.spaziovittabella.com.br"
+
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-rose-deep)] px-6 py-3.5 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--color-cream)] shadow-gold transition hover:translate-y-[-2px] hover:bg-[var(--color-rose)] sm:px-7 sm:text-xs sm:tracking-[0.22em]"
               >
                 Agende sua experiência
@@ -493,7 +495,7 @@ function Index() {
               Pronta para ficar ainda mais linda?
             </p>
             <a
-              href="#agendar"
+              href="https://app.spaziovittabella.com.br"
               className="mt-5 inline-flex items-center gap-2 rounded-full bg-[var(--color-rose-deep)] px-7 py-3.5 text-xs font-medium uppercase tracking-[0.22em] text-[var(--color-cream)] shadow-gold transition hover:bg-[var(--color-rose)]"
             >
               Agende seu horário
@@ -830,9 +832,8 @@ function Index() {
               </a>
 
               <a
-                href="https://www.trinks.com/vitta-bella1"
-                target="_blank"
-                rel="noreferrer"
+                href="https://app.spaziovittabella.com.br"
+
                 className="flex items-center gap-4 rounded-2xl border border-border bg-background p-4 transition hover:border-[var(--color-gold)]/60 hover:shadow-soft sm:p-5"
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--color-gold)]/15 text-[var(--color-gold)]">
@@ -840,7 +841,7 @@ function Index() {
                 </div>
                 <div className="min-w-0">
                   <p className="text-[10px] uppercase tracking-[0.22em] text-foreground/60 sm:text-xs">Agendamento online</p>
-                  <p className="truncate font-display text-lg text-[var(--color-rose-deep)] sm:text-xl">trinks.com/vitta-bella1</p>
+                  <p className="truncate font-display text-lg text-[var(--color-rose-deep)] sm:text-xl">Acesse o App Vitta Bella</p>
                 </div>
               </a>
 
